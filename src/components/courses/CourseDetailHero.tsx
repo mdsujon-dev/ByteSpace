@@ -10,7 +10,7 @@ import type { CourseDetail } from "@/lib/get-course-detail";
 export function CourseDetailHero({ course }: { course: CourseDetail }) {
   return (
     <section
-      className="relative bg-brand-blue pt-28 pb-10 lg:pt-[84px]"
+      className="relative bg-brand-blue hero-spacing"
       style={gridBackgroundStyle}
     >
       <Container>
