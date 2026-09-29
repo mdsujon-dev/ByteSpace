@@ -5,7 +5,7 @@ import { SocialAuthButtons } from "@/components/auth/SocialAuthButtons";
 export function LoginForm() {
   return (
     <div>
-      <span className="text-sm font-medium text-brand-blue">Sign in</span>
+      <span className="text-sm font-medium text-brand-blue">Sign In</span>
       <h2 className="mt-1 text-3xl font-bold text-zinc-900">Welcome Back</h2>
 
       <form className="mt-8 flex flex-col gap-5">
@@ -13,7 +13,7 @@ export function LoginForm() {
           label="Email"
           name="email"
           type="email"
-          placeholder="yourname@example.com"
+          placeholder="designer@example.com"
         />
         <AuthFormField label="Password" name="password" type="password" />
 
@@ -30,7 +30,7 @@ export function LoginForm() {
       <SocialAuthButtons />
 
       <p className="mt-6 text-center text-sm text-zinc-500">
-        Don&apos;t have an account?{" "}
+        New user?{" "}
         <Link href="/signup" className="font-medium text-brand-blue">
           Create an account
         </Link>

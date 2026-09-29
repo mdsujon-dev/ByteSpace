@@ -11,7 +11,7 @@ export default function LoginPage() {
   return (
     <AuthLayout
       heading="Sign in with ease"
-      description="Experience a seamless and effortless process that grants you instant access to a world of knowledge."
+      description="Experience a seamless and efficient sign-in process that grants you instant access to a world of knowledge."
     >
       <LoginForm />
     </AuthLayout>
