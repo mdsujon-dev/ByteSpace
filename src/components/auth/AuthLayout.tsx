@@ -13,7 +13,7 @@ type AuthLayoutProps = {
 export function AuthLayout({ heading, description, children }: AuthLayoutProps) {
   return (
     <div
-      className="relative flex flex-1 flex-col items-center overflow-hidden bg-brand-blue px-6 py-10 lg:flex-row lg:items-center lg:justify-between lg:px-16 lg:py-12"
+      className="relative flex flex-1 flex-col items-center overflow-hidden bg-brand-blue px-6 py-10 lg:min-h-256 lg:flex-row lg:items-center lg:justify-between lg:px-16 lg:py-12"
       style={gridBackgroundStyle}
     >
       <Link href="/" className="absolute top-8 left-6 lg:top-12 lg:left-16">
