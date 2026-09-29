@@ -6,6 +6,7 @@
   --brand-blue: #003be2;
   --brand-lime: #d4f42b;
   --brand-pink: #ff24bd;
+  --brand-gray: #CED0D3;
 }
 
 @theme inline {
@@ -14,6 +15,7 @@
   --color-brand-blue: var(--brand-blue);
   --color-brand-lime: var(--brand-lime);
   --color-brand-pink: var(--brand-pink);
+  --color-brand-gray: var(--brand-gray);
   --font-sans: var(--font-poppins);
 }
 
@@ -30,7 +32,6 @@ body {
 }
 .course-category-tabs .ant-tabs-tab {
   padding: 0;
-  margin: 0 !important;
 }
 .course-category-tabs .ant-tabs-ink-bar {
   display: none;

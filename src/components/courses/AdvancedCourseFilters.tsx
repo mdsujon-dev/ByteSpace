@@ -46,14 +46,14 @@ export function AdvancedCourseFilters() {
       <Tabs
         activeKey={active}
         onChange={setActive}
-        tabBarGutter={8}
+        tabBarGutter={16}
         moreIcon={null}
         className="course-category-tabs"
         items={categories.map((category) => ({
           key: category,
           label: (
             <span
-              className={`rounded-full px-5 py-2 text-sm font-medium whitespace-nowrap transition-colors ${
+              className={`inline-block rounded-full px-5 py-2 text-base leading-[1.2] font-medium whitespace-nowrap transition-colors ${
                 category === active
                   ? "bg-brand-lime text-zinc-900"
                   : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200"
