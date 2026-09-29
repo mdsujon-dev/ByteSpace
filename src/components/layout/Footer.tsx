@@ -3,18 +3,9 @@ import { Logo } from "@/components/icons/Logo";
 import { SearchInput } from "@/components/ui/SearchInput";
 
 const linkColumns = [
-  {
-    heading: "Development",
-    links: ["Featured Courses", "Featured Categories", "Business", "IT", "Design"],
-  },
-  {
-    heading: "Marketing",
-    links: ["Photography", "Finance", "Sport"],
-  },
-  {
-    heading: "",
-    links: ["Become a Creator", "Affiliate Program", "Contact", "Help", "About"],
-  },
+  ["Featured Courses", "Featured Categories", "Business", "IT", "Design"],
+  ["Development", "Marketing", "Photography", "Finance", "Sport"],
+  ["Become a Creator", "Affiliate Program", "Contact", "Help", "About"],
 ];
 
 export function Footer() {
@@ -41,26 +32,19 @@ export function Footer() {
           </div>
 
           <div className="grid grid-cols-3 gap-8">
-            {linkColumns.map((col, i) => (
-              <div key={i}>
-                {col.heading && (
-                  <h3 className="mb-3 text-sm font-semibold text-zinc-900">
-                    {col.heading}
-                  </h3>
-                )}
-                <ul className={`space-y-2 ${!col.heading ? "mt-7" : ""}`}>
-                  {col.links.map((label) => (
-                    <li key={label}>
-                      <Link
-                        href="#"
-                        className="text-sm text-zinc-500 transition-colors hover:text-zinc-900"
-                      >
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {linkColumns.map((links, i) => (
+              <ul key={i} className="space-y-3">
+                {links.map((label) => (
+                  <li key={label}>
+                    <Link
+                      href="#"
+                      className="text-sm text-zinc-500 transition-colors hover:text-zinc-900"
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             ))}
           </div>
         </div>
