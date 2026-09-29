@@ -22,3 +22,16 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* Strip antd's default line-tab chrome so only the pill labels show;
+   antd still drives the responsive scroll-with-arrows overflow behavior. */
+.course-category-tabs .ant-tabs-nav::before {
+  border-bottom: none;
+}
+.course-category-tabs .ant-tabs-tab {
+  padding: 0;
+  margin: 0 !important;
+}
+.course-category-tabs .ant-tabs-ink-bar {
+  display: none;
+}

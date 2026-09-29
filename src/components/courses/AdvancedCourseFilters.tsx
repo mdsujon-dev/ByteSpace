@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Tabs } from "antd";
 import { FiFilter, FiBarChart2 } from "react-icons/fi";
 import { MdOutlineCategory, MdSort } from "react-icons/md";
 
@@ -42,25 +43,27 @@ export function AdvancedCourseFilters() {
         </button>
       </div>
 
-      <div className="flex flex-wrap gap-3">
-        {categories.map((category) => {
-          const isActive = category === active;
-          return (
-            <button
-              key={category}
-              type="button"
-              onClick={() => setActive(category)}
+      <Tabs
+        activeKey={active}
+        onChange={setActive}
+        tabBarGutter={8}
+        moreIcon={null}
+        className="course-category-tabs"
+        items={categories.map((category) => ({
+          key: category,
+          label: (
+            <span
               className={`rounded-full px-5 py-2 text-sm font-medium whitespace-nowrap transition-colors ${
-                isActive
+                category === active
                   ? "bg-brand-lime text-zinc-900"
                   : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200"
               }`}
             >
               {category}
-            </button>
-          );
-        })}
-      </div>
+            </span>
+          ),
+        }))}
+      />
     </div>
   );
 }
