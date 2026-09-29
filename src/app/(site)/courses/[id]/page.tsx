@@ -32,7 +32,7 @@ export default async function CourseDetailPage(
     <div className="flex flex-1 flex-col">
       <CourseDetailHero course={course} />
 
-      <Container className="py-16 lg:pr-96">
+      <Container className="py-16 lg:pr-[418px]">
         <CourseTabs course={course} />
       </Container>
     </div>
