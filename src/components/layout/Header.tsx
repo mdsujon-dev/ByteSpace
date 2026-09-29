@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Logo } from "@/components/icons/Logo";
+import { Container } from "@/components/ui/Container";
 import { MdOutlineShoppingBag } from "react-icons/md";
 
 const navLinks = [
@@ -27,7 +28,7 @@ export function Header() {
         scrolled ? "bg-brand-blue" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <Container className="flex items-center justify-between py-4">
         <Link href="/">
           <Logo />
         </Link>
@@ -65,7 +66,7 @@ export function Header() {
             <MdOutlineShoppingBag size={24} />
           </button>
         </div>
-      </div>
+      </Container>
     </header>
   );
 }

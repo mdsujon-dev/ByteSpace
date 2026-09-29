@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { SearchInput } from "@/components/ui/SearchInput";
-import { CourseFilters } from "@/components/courses/CourseFilters";
+import { AdvancedCourseFilters } from "@/components/courses/AdvancedCourseFilters";
 import { CourseCard } from "@/components/courses/CourseCard";
 import { Pagination } from "@/components/ui/Pagination";
+import { Container } from "@/components/ui/Container";
 import { sampleCourses } from "@/lib/sample-courses";
 
 export const metadata: Metadata = {
@@ -18,8 +19,8 @@ export default function CoursesPage() {
         <SearchInput placeholder="Search for courses, topics, or instructors" />
       </Hero>
 
-      <section className="mx-auto w-full max-w-6xl px-6 py-10">
-        <CourseFilters />
+      <Container as="section" className="py-10">
+        <AdvancedCourseFilters />
 
         <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {sampleCourses.map((course) => (
@@ -30,7 +31,7 @@ export default function CoursesPage() {
         <div className="mt-10">
           <Pagination page={1} totalPages={5} />
         </div>
-      </section>
+      </Container>
     </div>
   );
 }
