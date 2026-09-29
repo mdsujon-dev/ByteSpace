@@ -32,7 +32,7 @@ export function Hero({
 
   return (
     <section
-      className={`flex flex-1 flex-col items-center justify-center bg-brand-blue px-6 text-center ${isCompact ? "py-14" : "py-24"} ${className ?? ""}`}
+      className={`flex flex-1 flex-col items-center justify-center bg-brand-blue px-6 text-center ${isCompact ? "py-14 lg:min-h-90" : "py-24"} ${className ?? ""}`}
       style={gridBackgroundStyle}
     >
       {eyebrow}
