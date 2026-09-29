@@ -10,7 +10,7 @@ export default function NotFound() {
   return (
     <Hero
       eyebrow={
-        <span className="bg-gradient-to-b from-brand-lime to-brand-blue bg-clip-text text-[7rem] font-extrabold leading-none text-transparent sm:text-[10rem]">
+        <span className="bg-linear-to-b from-brand-lime to-brand-blue bg-clip-text text-[7rem] font-extrabold leading-none text-transparent sm:text-[10rem]">
           404
         </span>
       }
