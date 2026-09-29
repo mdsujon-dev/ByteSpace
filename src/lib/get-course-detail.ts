@@ -8,13 +8,21 @@ export type Lesson = {
   locked: boolean;
 };
 
+export type Review = {
+  author: string;
+  avatar: string;
+  rating: number;
+  comment: string;
+};
+
 export type CourseDetail = Course & {
   subtitle: string;
   authorRole: string;
-  description: string;
+  description: string[];
   keyPoints: string[];
   lessonsList: Lesson[];
   sneakPeek: string[];
+  reviews: Review[];
 };
 
 export function getCourseDetail(id: string): CourseDetail | undefined {
@@ -30,6 +38,20 @@ export function getCourseDetail(id: string): CourseDetail | undefined {
     locked: i !== 0,
   }));
 
+  const reviewComments = [
+    "Clear, well-paced, and immediately useful.",
+    "Exactly the structure I needed to actually finish a project.",
+    "Great mix of theory and hands-on practice.",
+    "Would recommend to anyone starting out.",
+  ];
+
+  const reviews: Review[] = course.avatars.map((avatar, i) => ({
+    author: `Student ${i + 1}`,
+    avatar,
+    rating: Math.max(4, Number((course.rating - i * 0.1).toFixed(1))),
+    comment: reviewComments[i % reviewComments.length],
+  }));
+
   return {
     ...course,
     subtitle: detail.subtitle,
@@ -38,6 +60,7 @@ export function getCourseDetail(id: string): CourseDetail | undefined {
     keyPoints: detail.keyPoints,
     lessonsList,
     sneakPeek: course.avatars.length ? sneakPeekFor(course) : [],
+    reviews,
   };
 }
 
