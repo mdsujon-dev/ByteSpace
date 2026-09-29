@@ -69,7 +69,7 @@ export function CourseCard({ course, badgePosition = "bottom" }: CourseCardProps
           by <span className="text-brand-blue">{course.author}</span>
         </p>
 
-        <div className="mt-4 flex items-center justify-between">
+        <div className="mt-4 flex items-center gap-4">
           <span className="flex items-center gap-1.5 rounded-full bg-zinc-100 px-3 py-1.5 text-xs font-medium text-zinc-700">
             <MdSignalCellularAlt className="text-zinc-500" />
             {course.level}
@@ -80,12 +80,12 @@ export function CourseCard({ course, badgePosition = "bottom" }: CourseCardProps
                 key={i}
                 src={avatar}
                 alt=""
-                width={28}
-                height={28}
-                className="h-7 w-7 rounded-full border-2 border-white"
+                width={32}
+                height={32}
+                className="h-8 w-8 rounded-full border-2 border-white"
               />
             ))}
-            <span className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-brand-lime text-[10px] font-semibold text-zinc-900">
+            <span className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-brand-lime text-[10px] font-semibold text-zinc-900">
               {course.extraStudents}+
             </span>
           </div>
