@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/icons/Logo";
+import { SearchInput } from "@/components/ui/SearchInput";
 
 const linkColumns = [
   {
@@ -27,19 +28,12 @@ export function Footer() {
               Stay Up to date with our latest features and releases by
               joining our newsletter.
             </p>
-            <form className="mt-4 flex items-center gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full rounded-full border border-zinc-300 px-4 py-2 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-brand-blue focus:outline-none"
-              />
-              <button
-                type="submit"
-                className="shrink-0 rounded-full bg-brand-lime px-5 py-2 text-sm font-semibold text-zinc-900 transition-opacity hover:opacity-90"
-              >
-                Search
-              </button>
-            </form>
+            <SearchInput
+              type="email"
+              placeholder="Enter your email"
+              buttonLabel="Search"
+              className="mt-4"
+            />
             <p className="mt-3 text-xs text-zinc-400">
               By subscribing, you agree to our Privacy Policy and consent to
               receive updates from our company.
