@@ -63,7 +63,7 @@ export function AuthShowcase({ className }: { className?: string }) {
       </div>
 
       {/* upper card, brought down below the right card */}
-      <div className="absolute top-16 left-5 w-93.25">
+      <div className="absolute top-16 -left-5 w-93.25">
         <CourseCard course={showcaseCourses[1]} badgePosition="top" />
       </div>
 
