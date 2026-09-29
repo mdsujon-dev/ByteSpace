@@ -1,5 +1,5 @@
-import { FiShare2 } from "react-icons/fi";
-import { MdVerified, MdStar } from "react-icons/md";
+import { FiShare2, FiBarChart2, FiUsers } from "react-icons/fi";
+import { MdStar } from "react-icons/md";
 import { gridBackgroundStyle } from "@/lib/styles";
 import { Container } from "@/components/ui/Container";
 import { AppImage } from "@/components/ui/AppImage";
@@ -22,13 +22,6 @@ export function CourseDetailHero({ course }: { course: CourseDetail }) {
             <p className="mt-2 text-sm text-white/70">{course.subtitle}</p>
 
             <div className="mt-4 flex items-center gap-2">
-              <AppImage
-                src={course.avatars[0]}
-                alt=""
-                width={28}
-                height={28}
-                className="h-7 w-7 rounded-full border border-white/40"
-              />
               <span className="text-sm text-white/80">
                 by <span className="font-medium text-white">{course.author}</span>
               </span>
@@ -45,16 +38,17 @@ export function CourseDetailHero({ course }: { course: CourseDetail }) {
         </div>
 
         <div className="mt-6 flex flex-wrap items-center gap-2">
-          <span className="flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-zinc-700">
-            <MdVerified className="text-brand-blue" />
-            Certificated
+          <span className="flex items-center gap-1.5 rounded-full bg-white px-4 py-2 text-xs font-medium text-zinc-700">
+            <FiBarChart2 className="h-4 w-4 text-brand-blue" />
+            {course.level}
           </span>
-          <span className="flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-zinc-700">
-            <MdStar className="text-brand-lime" />
-            {course.rating.toFixed(1)} ({Math.max(course.comments - 36, 8)} Reviews)
+          <span className="flex items-center gap-1.5 rounded-full bg-white px-4 py-2 text-xs font-medium text-zinc-700">
+            <MdStar className="h-4 w-4 text-brand-blue" />
+            {course.rating.toFixed(1)} ({Math.max(course.comments - 36, 172)} reviews)
           </span>
-          <span className="rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-zinc-700">
-            {course.comments} Comments
+          <span className="flex items-center gap-1.5 rounded-full bg-white px-4 py-2 text-xs font-medium text-zinc-700">
+            <FiUsers className="h-4 w-4 text-brand-blue" />
+            {course.extraStudents} Students
           </span>
         </div>
 
