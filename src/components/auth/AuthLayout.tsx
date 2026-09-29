@@ -20,7 +20,7 @@ export function AuthLayout({ heading, description, children }: AuthLayoutProps) 
         <AppImage src="/logo.png" alt="ByteSpace" width={32} height={38} priority />
       </Link>
 
-      <div className="mt-20 flex w-full max-w-lg flex-col lg:mt-0">
+      <div className="hidden w-full max-w-lg flex-col lg:flex">
         <div className="max-w-sm">
           <h1 className="text-2xl font-bold text-white sm:text-3xl">
             {heading}
