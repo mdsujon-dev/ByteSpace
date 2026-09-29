@@ -25,7 +25,7 @@ export function CreatorHero({
 }: CreatorHeroProps) {
   return (
     <section
-      className="bg-brand-blue pt-28 pb-10 lg:pt-16"
+      className="bg-brand-blue pt-28 pb-10 lg:pt-32"
       style={gridBackgroundStyle}
     >
       <Container>
@@ -62,11 +62,9 @@ export function CreatorHero({
           <div className="flex items-center justify-between mt-2">
             <div className="flex flex-wrap items-center gap-2">
               <span className="flex items-center gap-1.5 rounded-full bg-white px-4 py-2 text-xs font-medium text-zinc-700">
-                <FiBox className="h-4 w-4 text-brand-blue" />
                 {productCount} Products
               </span>
               <span className="flex items-center gap-1.5 rounded-full bg-white px-4 py-2 text-xs font-medium text-zinc-700">
-                <FiUsers className="h-4 w-4 text-brand-blue" />
                 {followers} Followers
               </span>
             </div>
