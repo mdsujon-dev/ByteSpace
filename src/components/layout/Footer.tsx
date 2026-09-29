@@ -10,7 +10,7 @@ const linkColumns = [
 
 export function Footer() {
   return (
-    <footer className="border-t-2 border-brand-pink bg-white">
+    <footer className="border-t border-zinc-200 bg-white">
       <div className="mx-auto max-w-6xl px-6 py-14">
         <div className="flex flex-col gap-10 border-b border-zinc-200 pb-12 md:flex-row md:justify-between">
           <div className="max-w-xs">
