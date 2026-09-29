@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { CourseDetailHero } from "@/components/courses/CourseDetailHero";
 import { CourseMedia } from "@/components/courses/CourseMedia";
 import { CourseSidebar } from "@/components/courses/CourseSidebar";
-import { CourseKeyPoints } from "@/components/courses/CourseKeyPoints";
+import { CourseTabs } from "@/components/courses/CourseTabs";
 import { CourseSneakPeek } from "@/components/courses/CourseSneakPeek";
 import { getAllCourseIds, getCourseDetail } from "@/lib/get-course-detail";
 
@@ -36,20 +36,16 @@ export default async function CourseDetailPage(
       <CourseDetailHero course={course} />
 
       <Container className="-mt-14 grid grid-cols-1 gap-6 lg:-mt-16 lg:grid-cols-[1fr_360px]">
-        <CourseMedia course={course} />
+        <div className="flex flex-col gap-8">
+          <CourseMedia course={course} />
+          <CourseTabs course={course} />
+        </div>
+
         <CourseSidebar course={course} />
       </Container>
 
-      <Container className="flex flex-col gap-12 py-16">
-        <div>
-          <h2 className="text-lg font-bold text-zinc-900">Description</h2>
-          <p className="mt-4 text-sm leading-6 text-zinc-600">
-            {course.description}
-          </p>
-        </div>
-
+      <Container className="py-16">
         <CourseSneakPeek images={course.sneakPeek} />
-        <CourseKeyPoints points={course.keyPoints} />
       </Container>
     </div>
   );
