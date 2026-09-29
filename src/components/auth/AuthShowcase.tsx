@@ -55,22 +55,22 @@ export function AuthShowcase({ className }: { className?: string }) {
   return (
     <div
       aria-hidden="true"
-      className={`pointer-events-none relative h-150 w-full max-w-lg select-none ${className ?? ""}`}
+      className={`pointer-events-none relative h-165 w-full max-w-lg select-none ${className ?? ""}`}
     >
-      {/* lower card */}
-      <div className="absolute top-5 left-12.5 w-93.25">
+      {/* right card */}
+      <div className="absolute top-0 left-24 w-93.25">
         <CourseCard course={showcaseCourses[0]} badgePosition="top" />
       </div>
 
-      {/* upper card: 20px up, 50px left of the lower card */}
-      <div className="absolute top-0 left-0 w-93.25">
+      {/* upper card, brought down below the right card */}
+      <div className="absolute top-16 left-0 w-93.25">
         <CourseCard course={showcaseCourses[1]} badgePosition="top" />
       </div>
 
-      <span className="absolute top-14 -left-4 h-20 w-14 rounded-full border-8 border-brand-lime" />
+      <span className="absolute top-30 -left-4 h-20 w-14 rounded-full border-8 border-brand-lime" />
 
       {/* 3D-style triangle, 20px below the upper card */}
-      <div className="absolute top-114.5 left-2 h-16 w-20">
+      <div className="absolute top-130.5 left-2 h-16 w-20">
         <div
           className="absolute inset-0"
           style={{
