@@ -1,11 +1,21 @@
 import { CourseCard, type Course } from "@/components/courses/CourseCard";
 import { AppImage } from "@/components/ui/AppImage";
 
-const showcaseAvatars = [
+const uniqueAvatars = [
   "/avatars/avatar-1.png",
   "/avatars/avatar-2.png",
   "/avatars/avatar-3.png",
   "/avatars/avatar-4.png",
+];
+
+const badgeAvatars = [
+  "/avatars/avatar-1.png",
+  "/avatars/avatar-2.png",
+  "/avatars/avatar-3.png",
+  "/avatars/avatar-4.png",
+  "/avatars/avatar-1.png",
+  "/avatars/avatar-2.png",
+  "/avatars/avatar-3.png",
 ];
 
 const showcaseCourses: Course[] = [
@@ -21,7 +31,7 @@ const showcaseCourses: Course[] = [
     price: 25,
     pricingLabel: "lifetime",
     thumbnail: "/courses/course-4.jpg",
-    avatars: showcaseAvatars,
+    avatars: uniqueAvatars,
     extraStudents: 26,
   },
   {
@@ -36,7 +46,7 @@ const showcaseCourses: Course[] = [
     price: 25,
     pricingLabel: "lifetime",
     thumbnail: "/courses/course-1.jpg",
-    avatars: showcaseAvatars,
+    avatars: uniqueAvatars,
     extraStudents: 26,
   },
 ];
@@ -47,17 +57,35 @@ export function AuthShowcase({ className }: { className?: string }) {
       aria-hidden="true"
       className={`pointer-events-none relative h-150 w-full max-w-lg select-none ${className ?? ""}`}
     >
-      <div className="absolute top-24 left-0 w-96 origin-top-left scale-[0.85] opacity-90">
+      {/* lower card */}
+      <div className="absolute top-5 left-12.5 w-93.25">
         <CourseCard course={showcaseCourses[0]} badgePosition="top" />
       </div>
 
-      <div className="absolute top-0 left-20 w-96 origin-top-left scale-[0.95]">
+      {/* upper card: 20px up, 50px left of the lower card */}
+      <div className="absolute top-0 left-0 w-93.25">
         <CourseCard course={showcaseCourses[1]} badgePosition="top" />
       </div>
 
       <span className="absolute top-14 -left-4 h-20 w-14 rounded-full border-8 border-brand-lime" />
 
-      <span className="absolute -bottom-4 left-2 h-0 w-0 rotate-[8deg] border-x-24 border-t-40 border-x-transparent border-t-brand-lime" />
+      {/* 3D-style triangle, 20px below the upper card */}
+      <div className="absolute top-114.5 left-2 h-16 w-20">
+        <div
+          className="absolute inset-0"
+          style={{
+            clipPath: "polygon(50% 0%, 0% 100%, 50% 100%)",
+            background: "var(--brand-lime)",
+          }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            clipPath: "polygon(50% 0%, 100% 100%, 50% 100%)",
+            background: "#a3c400",
+          }}
+        />
+      </div>
 
       <div className="absolute right-0 bottom-2 rounded-xl bg-brand-lime px-4 py-3 shadow-lg">
         <p className="text-base font-bold text-zinc-900">Happy Students</p>
@@ -67,9 +95,9 @@ export function AuthShowcase({ className }: { className?: string }) {
           <span className="text-zinc-600">(240)</span>
         </p>
         <div className="mt-2 flex items-center -space-x-2">
-          {showcaseAvatars.map((src) => (
+          {badgeAvatars.map((src, i) => (
             <AppImage
-              key={src}
+              key={i}
               src={src}
               alt=""
               width={28}
