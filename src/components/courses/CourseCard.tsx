@@ -31,7 +31,7 @@ export function CourseCard({ course, badgePosition = "bottom" }: CourseCardProps
       href={`/courses/${course.id}`}
       className="group block rounded-3xl border border-[#CED0D3] bg-white p-3"
     >
-      <div className="relative aspect-4/3 w-full overflow-hidden rounded-xl bg-zinc-100">
+      <div className="relative h-48.75 w-full overflow-hidden rounded-xl bg-zinc-100">
         <AppImage
           src={course.thumbnail}
           alt={course.title}
@@ -57,7 +57,7 @@ export function CourseCard({ course, badgePosition = "bottom" }: CourseCardProps
 
       <div className="pt-4">
         <div className="flex items-start justify-between gap-2">
-          <h3 className="truncate text-base font-bold text-zinc-900">
+          <h3 className="truncate text-xl leading-7 font-semibold tracking-[-0.01em] text-zinc-900">
             {course.title}
           </h3>
           <span className="flex shrink-0 items-center gap-1 text-sm text-zinc-500">
