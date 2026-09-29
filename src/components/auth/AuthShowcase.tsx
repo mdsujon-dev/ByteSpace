@@ -58,7 +58,7 @@ export function AuthShowcase({ className }: { className?: string }) {
       className={`pointer-events-none relative h-165 w-full max-w-lg select-none ${className ?? ""}`}
     >
       {/* right card, raised above the other card */}
-      <div className="absolute -top-12.5 left-36.5 z-10 w-93.25">
+      <div className="absolute -top-15.5 left-36.5 z-10 w-93.25">
         <CourseCard course={showcaseCourses[0]} badgePosition="top" />
       </div>
 
@@ -87,7 +87,7 @@ export function AuthShowcase({ className }: { className?: string }) {
         />
       </div>
 
-      <div className="absolute right-0 bottom-14.5 rounded-xl bg-brand-lime px-4 py-3 shadow-lg">
+      <div className="absolute right-0 bottom-24.5 rounded-xl bg-brand-lime px-4 py-3 shadow-lg">
         <p className="text-base font-bold text-zinc-900">Happy Students</p>
         <p className="mt-0.5 flex items-center gap-1 text-sm text-zinc-700">
           4.5
