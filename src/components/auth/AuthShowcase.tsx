@@ -87,7 +87,7 @@ export function AuthShowcase({ className }: { className?: string }) {
         />
       </div>
 
-      <div className="absolute right-0 bottom-2 rounded-xl bg-brand-lime px-4 py-3 shadow-lg">
+      <div className="absolute right-0 bottom-14.5 rounded-xl bg-brand-lime px-4 py-3 shadow-lg">
         <p className="text-base font-bold text-zinc-900">Happy Students</p>
         <p className="mt-0.5 flex items-center gap-1 text-sm text-zinc-700">
           4.5
