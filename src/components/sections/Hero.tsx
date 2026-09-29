@@ -38,7 +38,7 @@ export function Hero({
       {eyebrow}
 
       <h1
-        className={`mt-2 max-w-xl font-bold text-white ${isCompact ? "text-xl sm:text-2xl" : "text-2xl sm:text-3xl"}`}
+        className="mt-2 max-w-xl text-2xl font-bold text-white sm:text-3xl"
       >
         {title}
       </h1>

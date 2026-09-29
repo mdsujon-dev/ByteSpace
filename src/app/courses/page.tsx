@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { SearchInput } from "@/components/ui/SearchInput";
+import { SearchScopeDropdown } from "@/components/ui/SearchScopeDropdown";
 import { AdvancedCourseFilters } from "@/components/courses/AdvancedCourseFilters";
 import { CourseCard } from "@/components/courses/CourseCard";
 import { Pagination } from "@/components/ui/Pagination";
@@ -15,8 +16,12 @@ export const metadata: Metadata = {
 export default function CoursesPage() {
   return (
     <div className="flex flex-1 flex-col">
-      <Hero size="sm" title="Find Your Best Course">
-        <SearchInput placeholder="Search for courses, topics, or instructors" />
+      <Hero size="sm" title="Find Your Next Course">
+        <SearchInput
+          placeholder="Search"
+          icon
+          trailing={<SearchScopeDropdown />}
+        />
       </Hero>
 
       <Container as="section" className="py-10">

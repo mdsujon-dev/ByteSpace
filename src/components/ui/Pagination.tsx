@@ -15,7 +15,7 @@ export function Pagination({ page = 1, totalPages = 5 }: PaginationProps) {
         type="button"
         disabled={page === 1}
         aria-label="Previous page"
-        className="flex h-11 w-11 items-center justify-center rounded-full border border-zinc-400 text-zinc-700 transition-colors hover:border-zinc-600 disabled:opacity-40"
+        className="flex h-11 w-11 items-center justify-center rounded-full border border-brand-gray text-zinc-700 transition-colors hover:border-zinc-600 disabled:opacity-40"
       >
         &lt;
       </button>
@@ -41,7 +41,7 @@ export function Pagination({ page = 1, totalPages = 5 }: PaginationProps) {
         type="button"
         disabled={page === totalPages}
         aria-label="Next page"
-        className="flex h-11 w-11 items-center justify-center rounded-full border border-zinc-400 text-zinc-700 transition-colors hover:border-zinc-600 disabled:opacity-40"
+        className="flex h-11 w-11 items-center justify-center rounded-full border border-brand-gray text-zinc-700 transition-colors hover:border-zinc-600 disabled:opacity-40"
       >
         &gt;
       </button>
