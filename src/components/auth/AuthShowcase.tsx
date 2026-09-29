@@ -98,12 +98,12 @@ export function AuthShowcase({ className }: { className?: string }) {
               key={i}
               src={src}
               alt=""
-              width={43}
-              height={43}
-              className="h-10.75 w-10.75 rounded-full border border-white"
+              width={40}
+              height={40}
+              className="h-10 w-10 shrink-0 rounded-full border border-white object-cover"
             />
           ))}
-          <span className="flex h-10.75 w-10.75 items-center justify-center rounded-full border border-white bg-zinc-900 text-[10px] font-semibold text-white">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white bg-zinc-900 text-[11px] font-semibold text-white">
             2K+
           </span>
         </div>

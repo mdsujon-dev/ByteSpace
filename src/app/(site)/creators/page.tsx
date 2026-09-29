@@ -4,7 +4,8 @@ import { Container } from "@/components/ui/Container";
 import { CreatorHero } from "@/components/creators/CreatorHero";
 import { CreatorFilterTabs } from "@/components/creators/CreatorFilterTabs";
 import { CourseCard } from "@/components/courses/CourseCard";
-import { getCreator, getCoursesByCreator } from "@/lib/get-creator";
+import { getCreator } from "@/lib/get-creator";
+import { sampleCourses } from "@/lib/sample-courses";
 
 export const metadata: Metadata = {
   title: "Creator Profile | ByteSpace",
@@ -17,7 +18,11 @@ export default function CreatorProfilePage() {
   
   if (!creator) return notFound();
 
-  const courses = getCoursesByCreator(creator.name);
+  // Get exactly 6 courses with different thumbnails
+  const courses = sampleCourses.slice(0, 6).map((c) => ({
+    ...c,
+    author: creator.name,
+  }));
 
   return (
     <div className="flex flex-1 flex-col">

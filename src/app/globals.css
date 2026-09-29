@@ -36,3 +36,14 @@ body {
 .course-category-tabs .ant-tabs-ink-bar {
   display: none;
 }
+
+.hero-spacing {
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+}
+@media (min-width: 1024px) {
+  .hero-spacing {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+  }
+}

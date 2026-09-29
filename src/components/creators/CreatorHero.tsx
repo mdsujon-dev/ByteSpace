@@ -25,7 +25,7 @@ export function CreatorHero({
 }: CreatorHeroProps) {
   return (
     <section
-      className="bg-brand-blue pt-28 pb-10 lg:pt-32"
+      className="bg-brand-blue hero-spacing"
       style={gridBackgroundStyle}
     >
       <Container>
