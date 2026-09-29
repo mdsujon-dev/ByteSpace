@@ -102,25 +102,25 @@ export function Features() {
             </div>
             
             {/* Floating widget 1: Total Revenue */}
-            <div className="absolute top-[10%] left-0 z-20 rounded-2xl bg-brand-blue p-5 sm:-left-6">
-              <p className="text-[10px] font-medium text-white/70 uppercase tracking-wider">Total Revenue</p>
-              <p className="text-[10px] text-white/50 mb-2">July 1-28</p>
-              <p className="text-3xl font-bold text-white">$120.29</p>
-              <div className="mt-3 h-1.5 w-40 rounded-full bg-white/20">
+            <div className="absolute top-[calc(5%+5px)] left-[10px] z-0 w-[240px] rounded-2xl bg-brand-blue p-5">
+              <p className="text-[8px] font-medium text-white/70 uppercase tracking-wider">Total Revenue</p>
+              <p className="text-[8px] text-white/50 mb-2">July 1-28</p>
+              <p className="text-2xl font-bold text-white">$120.29</p>
+              <div className="mt-3 h-1.5 w-full rounded-full bg-white/20">
                 <div className="h-full w-[72%] rounded-full bg-brand-lime" />
               </div>
             </div>
 
             {/* Floating widget 2: Year to Date */}
-            <div className="absolute top-[44%] left-0 z-20 rounded-2xl bg-brand-blue p-4 sm:-left-6">
-              <p className="text-[10px] font-medium text-white/70 uppercase tracking-wider">Year to Date</p>
-              <p className="text-[10px] text-white/50 mb-2">2023</p>
-              <p className="text-2xl font-bold text-white">$1,200.38</p>
-              <span className="mt-2 inline-block rounded-full bg-brand-lime px-2 py-0.5 text-[10px] font-bold text-zinc-900">12$</span>
+            <div className="absolute top-[calc(44%-10px)] left-[10px] z-0 rounded-2xl bg-brand-blue p-4">
+              <p className="text-[8px] font-medium text-white/70 uppercase tracking-wider">Year to Date</p>
+              <p className="text-[8px] text-white/50 mb-2">2023</p>
+              <p className="text-xl font-bold text-white">$1,200.38</p>
+              <span className="mt-2 inline-block rounded-full bg-brand-lime px-2 py-0.5 text-[8px] font-bold text-zinc-900">12$</span>
             </div>
 
             {/* Squiggle lime */}
-            <div className="absolute top-[15%] right-4 z-20 w-[90px] h-[90px] sm:right-6">
+            <div className="absolute top-[calc(35%-80px)] right-[112px] z-20 w-[120px] h-[120px] sm:right-[120px] -scale-x-100">
               <div className="relative w-full h-full">
                 <AppImage src="/auth/squiggle.png" alt="Decoration" fill className="object-contain" />
                 <div 
