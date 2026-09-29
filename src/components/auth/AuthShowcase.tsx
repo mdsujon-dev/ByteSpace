@@ -58,7 +58,7 @@ export function AuthShowcase({ className }: { className?: string }) {
       className={`pointer-events-none relative h-165 w-full max-w-lg select-none ${className ?? ""}`}
     >
       {/* right card, raised above the other card */}
-      <div className="absolute -top-15.5 left-36.5 z-10 w-93.25">
+      <div className="absolute -top-5.5 left-36.5 z-10 w-93.25">
         <CourseCard course={showcaseCourses[0]} />
       </div>
 
