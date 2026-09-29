@@ -45,14 +45,14 @@ export function AuthShowcase({ className }: { className?: string }) {
   return (
     <div
       aria-hidden="true"
-      className={`pointer-events-none relative h-130 w-full max-w-md select-none ${className ?? ""}`}
+      className={`pointer-events-none relative h-150 w-full max-w-lg select-none ${className ?? ""}`}
     >
-      <div className="absolute top-24 left-0 w-72 origin-top-left scale-[0.85] opacity-90">
-        <CourseCard course={showcaseCourses[0]} />
+      <div className="absolute top-24 left-0 w-96 origin-top-left scale-[0.85] opacity-90">
+        <CourseCard course={showcaseCourses[0]} badgePosition="top" />
       </div>
 
-      <div className="absolute top-0 left-20 w-72 origin-top-left scale-[0.95]">
-        <CourseCard course={showcaseCourses[1]} />
+      <div className="absolute top-0 left-20 w-96 origin-top-left scale-[0.95]">
+        <CourseCard course={showcaseCourses[1]} badgePosition="top" />
       </div>
 
       <span className="absolute top-14 -left-4 h-20 w-14 rounded-full border-8 border-brand-lime" />
