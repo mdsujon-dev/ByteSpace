@@ -79,8 +79,8 @@ export function AuthShowcase({ className }: { className?: string }) {
       <AppImage
         src="/auth/triangle.png"
         alt=""
-        width={118}
-        height={121}
+        width={1277}
+        height={1231}
         fit="contain"
         className="absolute top-94.75 left-2 h-40 w-44"
       />
@@ -115,7 +115,7 @@ export function AuthShowcase({ className }: { className?: string }) {
         width={1254}
         height={1254}
         fit="contain"
-        className="absolute right-2 bottom-52 z-20 h-40 w-38.5 opacity-70"
+        className="absolute right-2 bottom-51.5 z-20 h-40 w-38.5 opacity-70"
       />
     </div>
   );
