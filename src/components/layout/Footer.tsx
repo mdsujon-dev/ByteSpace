@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/icons/Logo";
 import { SearchInput } from "@/components/ui/SearchInput";
+import { Container } from "@/components/ui/Container";
 
 const linkColumns = [
   ["Featured Courses", "Featured Categories", "Business", "IT", "Design"],
@@ -11,7 +12,7 @@ const linkColumns = [
 export function Footer() {
   return (
     <footer className="border-t border-zinc-200 bg-white">
-      <div className="mx-auto max-w-6xl px-6 py-14">
+      <Container className="py-14">
         <div className="flex flex-col gap-10 border-b border-zinc-200 pb-12 md:flex-row md:justify-between">
           <div className="max-w-xs">
             <Logo textClassName="text-zinc-900" />
@@ -63,7 +64,7 @@ export function Footer() {
             </Link>
           </div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }
