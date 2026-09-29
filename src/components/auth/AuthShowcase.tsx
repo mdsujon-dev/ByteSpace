@@ -62,30 +62,21 @@ export function AuthShowcase({ className }: { className?: string }) {
         <CourseCard course={showcaseCourses[0]} />
       </div>
 
-      {/* upper card, brought down below the right card */}
-      <div className="absolute top-16 left-5 w-93.25">
+      {/* lower card, flush with the container's left edge */}
+      <div className="absolute top-16 left-0 w-93.25">
         <CourseCard course={showcaseCourses[1]} />
       </div>
 
       <span className="absolute top-30 -left-4 h-20 w-14 rounded-full border-8 border-brand-lime" />
 
-      {/* 3D-style triangle, 20px below the upper card */}
-      <div className="absolute top-103 left-2 h-28 w-32">
-        <div
-          className="absolute inset-0"
-          style={{
-            clipPath: "polygon(60% 0%, 0% 100%, 60% 100%)",
-            background: "var(--brand-lime)",
-          }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            clipPath: "polygon(60% 0%, 100% 100%, 60% 100%)",
-            background: "#a3c400",
-          }}
-        />
-      </div>
+      <AppImage
+        src="/auth/triangle.png"
+        alt=""
+        width={118}
+        height={121}
+        fit="contain"
+        className="absolute top-103 left-2 h-28 w-32"
+      />
 
       <div className="absolute right-0 bottom-29.5 rounded-xl bg-brand-lime px-2 py-4 shadow-lg">
         <p className="text-base font-bold text-zinc-900">Happy Students</p>
