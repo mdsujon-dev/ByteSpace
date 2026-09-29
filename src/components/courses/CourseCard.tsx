@@ -20,7 +20,12 @@ export type Course = {
   extraStudents: number;
 };
 
-export function CourseCard({ course }: { course: Course }) {
+type CourseCardProps = {
+  course: Course;
+  badgePosition?: "top" | "bottom";
+};
+
+export function CourseCard({ course, badgePosition = "bottom" }: CourseCardProps) {
   return (
     <Link
       href={`/courses/${course.id}`}
@@ -33,7 +38,11 @@ export function CourseCard({ course }: { course: Course }) {
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
         />
-        <div className="absolute inset-x-3 bottom-3 flex flex-wrap gap-2">
+        <div
+          className={`absolute inset-x-3 flex flex-wrap gap-2 ${
+            badgePosition === "top" ? "top-3" : "bottom-3"
+          }`}
+        >
           <span className="rounded-full bg-white/80 px-3 py-1 text-xs font-medium text-zinc-700 backdrop-blur-sm">
             {course.lessons} Lessons
           </span>
