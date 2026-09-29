@@ -87,7 +87,7 @@ export function AuthShowcase({ className }: { className?: string }) {
         />
       </div>
 
-      <div className="absolute right-0 bottom-32 rounded-xl bg-brand-lime px-10.25 py-6.75 shadow-lg">
+      <div className="absolute right-0 bottom-24.5 rounded-xl bg-brand-lime px-10.25 py-6.75 shadow-lg">
         <p className="text-base font-bold text-zinc-900">Happy Students</p>
         <p className="mt-0.5 flex items-center gap-1 text-sm text-zinc-700">
           4.5
@@ -100,12 +100,12 @@ export function AuthShowcase({ className }: { className?: string }) {
               key={i}
               src={src}
               alt=""
-              width={28}
-              height={28}
-              className="h-7 w-7 rounded-full border border-white"
+              width={43}
+              height={43}
+              className="h-10.75 w-10.75 rounded-full border border-white"
             />
           ))}
-          <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white bg-zinc-900 text-[10px] font-semibold text-white">
+          <span className="flex h-10.75 w-10.75 items-center justify-center rounded-full border border-white bg-zinc-900 text-[10px] font-semibold text-white">
             2K+
           </span>
         </div>
