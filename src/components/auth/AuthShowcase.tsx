@@ -59,12 +59,12 @@ export function AuthShowcase({ className }: { className?: string }) {
     >
       {/* right card, raised above the other card */}
       <div className="absolute -top-15.5 left-36.5 z-10 w-93.25">
-        <CourseCard course={showcaseCourses[0]} badgePosition="top" />
+        <CourseCard course={showcaseCourses[0]} />
       </div>
 
       {/* upper card, brought down below the right card */}
       <div className="absolute top-16 left-5 w-93.25">
-        <CourseCard course={showcaseCourses[1]} badgePosition="top" />
+        <CourseCard course={showcaseCourses[1]} />
       </div>
 
       <span className="absolute top-30 -left-4 h-20 w-14 rounded-full border-8 border-brand-lime" />
