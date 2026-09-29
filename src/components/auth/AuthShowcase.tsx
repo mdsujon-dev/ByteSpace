@@ -67,7 +67,14 @@ export function AuthShowcase({ className }: { className?: string }) {
         <CourseCard course={showcaseCourses[1]} />
       </div>
 
-      <span className="absolute -top-5 left-32.5 z-20 h-20 w-14 rounded-full border-8 border-brand-lime" />
+      <AppImage
+        src="/auth/ring.png"
+        alt=""
+        width={318}
+        height={286}
+        fit="contain"
+        className="absolute -top-5 left-32.5 z-20 h-18 w-20"
+      />
 
       <AppImage
         src="/auth/triangle.png"
