@@ -47,15 +47,15 @@ export function AuthShowcase({ className }: { className?: string }) {
       aria-hidden="true"
       className={`pointer-events-none relative h-130 w-full max-w-md select-none ${className ?? ""}`}
     >
-      <div className="absolute top-24 left-0 w-72 origin-top-left -rotate-6 scale-[0.75] opacity-90">
+      <div className="absolute top-24 left-0 w-72 origin-top-left scale-[0.85] opacity-90">
         <CourseCard course={showcaseCourses[0]} />
       </div>
 
-      <div className="absolute top-0 left-20 w-72 origin-top-left -rotate-3 scale-[0.85]">
+      <div className="absolute top-0 left-20 w-72 origin-top-left scale-[0.95]">
         <CourseCard course={showcaseCourses[1]} />
       </div>
 
-      <span className="absolute top-14 -left-4 h-20 w-14 -rotate-12 rounded-full border-8 border-brand-lime" />
+      <span className="absolute top-14 -left-4 h-20 w-14 rounded-full border-8 border-brand-lime" />
 
       <span className="absolute -bottom-4 left-2 h-0 w-0 rotate-[8deg] border-x-24 border-t-40 border-x-transparent border-t-brand-lime" />
 
