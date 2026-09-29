@@ -108,6 +108,15 @@ export function AuthShowcase({ className }: { className?: string }) {
           </span>
         </div>
       </div>
+
+      <AppImage
+        src="/auth/squiggle.png"
+        alt=""
+        width={1254}
+        height={1254}
+        fit="contain"
+        className="absolute right-2 bottom-67 z-20 h-32 w-28"
+      />
     </div>
   );
 }
