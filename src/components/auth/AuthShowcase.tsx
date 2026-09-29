@@ -70,18 +70,18 @@ export function AuthShowcase({ className }: { className?: string }) {
       <span className="absolute top-30 -left-4 h-20 w-14 rounded-full border-8 border-brand-lime" />
 
       {/* 3D-style triangle, 20px below the upper card */}
-      <div className="absolute top-110.5 left-2 h-24 w-28">
+      <div className="absolute top-103 left-2 h-28 w-32">
         <div
           className="absolute inset-0"
           style={{
-            clipPath: "polygon(50% 0%, 0% 100%, 50% 100%)",
+            clipPath: "polygon(60% 0%, 0% 100%, 60% 100%)",
             background: "var(--brand-lime)",
           }}
         />
         <div
           className="absolute inset-0"
           style={{
-            clipPath: "polygon(50% 0%, 100% 100%, 50% 100%)",
+            clipPath: "polygon(60% 0%, 100% 100%, 60% 100%)",
             background: "#a3c400",
           }}
         />
