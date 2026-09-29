@@ -73,7 +73,7 @@ export function AuthShowcase({ className }: { className?: string }) {
         width={318}
         height={286}
         fit="contain"
-        className="absolute -top-5 left-32.5 z-20 h-18 w-20"
+        className="absolute -top-5 left-26 z-20 h-22 w-24"
       />
 
       <AppImage
