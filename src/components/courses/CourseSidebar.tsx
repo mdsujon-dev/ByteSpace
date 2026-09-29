@@ -106,7 +106,7 @@ export function CourseSidebar({ course }: { course: CourseDetail }) {
 
       <Link
         href="/creators"
-        className="mt-4 inline-block rounded-full border border-[#CED0D3] px-5 py-2 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50"
+        className="mt-4 inline-block cursor-pointer rounded-full border border-[#CED0D3] px-5 py-2 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-50"
       >
         See Full Profile
       </Link>
