@@ -1,0 +1,162 @@
+[
+  {
+    "title": "Build Digital Asset",
+    "subtitle": "Unlock the power of digital creation with expert guidance",
+    "authorRole": "Lead Instructor",
+    "description": "This course provides a comprehensive walkthrough of building and shipping a digital asset from scratch. You'll learn how to move from a rough idea to a polished, launch-ready product, covering research, design principles, and the technical workflow professionals use every day. Along the way you'll work through hands-on exercises modeled on real client briefs so the skills transfer directly to your own projects.",
+    "keyPoints": [
+      "Foundational Concepts",
+      "Design Principles Basics",
+      "Advanced Techniques & Digital Creation",
+      "Project Fundamentals & Setup",
+      "Optimizing for Various Platforms",
+      "Sophisticated Development and Workflow",
+      "Real World Applications",
+      "Creative & Digital Design Skill-Set Building"
+    ]
+  },
+  {
+    "title": "The Complete Web Development Bootcamp",
+    "subtitle": "Go from zero to full-stack developer with one complete roadmap",
+    "authorRole": "Senior Web Instructor",
+    "description": "A project-based path through modern web development, covering HTML, CSS, JavaScript, and the frameworks powering today's production apps. Each module builds toward a portfolio-ready project, so by the end you'll have real, deployable work to show rather than just finished exercises.",
+    "keyPoints": [
+      "HTML, CSS & Semantic Markup",
+      "Modern JavaScript Fundamentals",
+      "Responsive Layout Techniques",
+      "Working with APIs & Data",
+      "Component-Based Frontend Architecture",
+      "Backend Basics & Databases",
+      "Deployment & Version Control",
+      "Building a Portfolio-Ready Project"
+    ]
+  },
+  {
+    "title": "Data Science & Machine Learning A-Z",
+    "subtitle": "Turn raw data into real decisions with practical ML workflows",
+    "authorRole": "Data Science Lead",
+    "description": "A hands-on introduction to the data science pipeline, from cleaning messy datasets to training and evaluating machine learning models. You'll build intuition for when to reach for which technique, then apply it across a series of practical, real-world style datasets.",
+    "keyPoints": [
+      "Data Cleaning & Preparation",
+      "Exploratory Data Analysis",
+      "Core Machine Learning Algorithms",
+      "Model Evaluation & Tuning",
+      "Working with Python Data Tools",
+      "Feature Engineering Basics",
+      "Visualizing Results Clearly",
+      "Applying ML to Real Datasets"
+    ]
+  },
+  {
+    "title": "Digital Marketing Masterclass",
+    "subtitle": "Build campaigns that actually move the numbers that matter",
+    "authorRole": "Marketing Strategist",
+    "description": "This course walks through the full digital marketing toolkit: SEO, paid campaigns, content strategy, and analytics, with an emphasis on how the pieces work together. You'll leave with a repeatable framework for planning and measuring campaigns instead of a grab-bag of disconnected tactics.",
+    "keyPoints": [
+      "SEO Fundamentals",
+      "Paid Advertising Basics",
+      "Content & Social Strategy",
+      "Email Marketing Workflows",
+      "Analytics & Campaign Tracking",
+      "Audience Research & Targeting",
+      "Conversion Rate Optimization",
+      "Building a Full Campaign Plan"
+    ]
+  },
+  {
+    "title": "UI/UX Design Essentials",
+    "subtitle": "Design interfaces people enjoy using, backed by real process",
+    "authorRole": "Product Designer",
+    "description": "Learn the design process real product teams use, from user research and wireframing through to high-fidelity prototypes and handoff. The course focuses on decision-making, not just tools, so you'll understand why a design works, not just how to make one that looks polished.",
+    "keyPoints": [
+      "User Research Basics",
+      "Wireframing & Information Architecture",
+      "Visual Design Principles",
+      "Prototyping & Interaction Design",
+      "Design Systems Fundamentals",
+      "Usability Testing",
+      "Handoff & Developer Collaboration",
+      "Building a Design Case Study"
+    ]
+  },
+  {
+    "title": "Personal Finance & Investing 101",
+    "subtitle": "Build a practical plan for saving, budgeting, and investing",
+    "authorRole": "Finance Educator",
+    "description": "A clear, jargon-free introduction to managing money well, budgeting, saving, and building a simple, sustainable investment plan. The course is built around practical exercises so you leave with an actual plan, not just concepts.",
+    "keyPoints": [
+      "Budgeting That Actually Sticks",
+      "Building an Emergency Fund",
+      "Understanding Investment Basics",
+      "Retirement Accounts Explained",
+      "Managing & Reducing Debt",
+      "Reading Financial Statements",
+      "Risk & Diversification",
+      "Setting Long-Term Money Goals"
+    ]
+  },
+  {
+    "title": "Photography for Beginners",
+    "subtitle": "Move off auto mode and start shooting with confidence",
+    "authorRole": "Photography Instructor",
+    "description": "Start from the fundamentals of exposure, composition, and light, then build toward a consistent personal style. Every lesson pairs a concept with a shooting assignment, so you're practicing on real subjects from day one instead of just watching.",
+    "keyPoints": [
+      "Camera Basics & Exposure Triangle",
+      "Composition Fundamentals",
+      "Working with Natural Light",
+      "Portrait Shooting Basics",
+      "Editing & Post-Processing",
+      "Choosing the Right Gear",
+      "Developing a Personal Style",
+      "Building a Starter Portfolio"
+    ]
+  },
+  {
+    "title": "Motion Graphics in After Effects",
+    "subtitle": "Bring static designs to life with professional motion techniques",
+    "authorRole": "Motion Designer",
+    "description": "Learn the core animation principles and After Effects workflow used in professional motion design, from keyframing and easing to compositing and export. Each module builds a real deliverable, from a simple logo sting to a short animated sequence.",
+    "keyPoints": [
+      "After Effects Interface & Workflow",
+      "Keyframes & Easing Fundamentals",
+      "Shape Layers & Vector Animation",
+      "Typography in Motion",
+      "Compositing & Layer Effects",
+      "Audio-Synced Animation",
+      "Rendering & Export Settings",
+      "Building a Motion Reel"
+    ]
+  },
+  {
+    "title": "Copywriting That Converts",
+    "subtitle": "Write copy that gets read, believed, and acted on",
+    "authorRole": "Copywriting Coach",
+    "description": "A practical course in persuasive writing for landing pages, emails, and ads. You'll learn proven copy frameworks and how to adapt them to different audiences, then apply them to real briefs so you finish with copy you could actually ship.",
+    "keyPoints": [
+      "Understanding Your Reader",
+      "Headlines That Earn Attention",
+      "Persuasive Copy Frameworks",
+      "Writing for Landing Pages",
+      "Email Copy That Gets Opened",
+      "Ad Copy Fundamentals",
+      "Editing for Clarity & Punch",
+      "Building a Copywriting Portfolio"
+    ]
+  },
+  {
+    "title": "Freelancing on Fiverr & Upwork",
+    "subtitle": "Turn your skills into a steady freelance income stream",
+    "authorRole": "Freelance Consultant",
+    "description": "A practical, no-fluff guide to building a freelance business on the major platforms, from setting up a profile that converts to pricing, proposals, and client communication. The course focuses on repeatable systems you can run week after week.",
+    "keyPoints": [
+      "Building a Profile That Converts",
+      "Pricing Your Services",
+      "Writing Winning Proposals",
+      "Client Communication Basics",
+      "Managing Scope & Revisions",
+      "Getting Repeat Clients",
+      "Handling Payments & Contracts",
+      "Scaling Beyond One Platform"
+    ]
+  }
+]
