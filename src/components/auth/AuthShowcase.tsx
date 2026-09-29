@@ -87,14 +87,14 @@ export function AuthShowcase({ className }: { className?: string }) {
         />
       </div>
 
-      <div className="absolute right-0 bottom-22 rounded-xl bg-brand-lime px-4 py-4 shadow-lg">
+      <div className="absolute right-0 bottom-27 rounded-xl bg-brand-lime px-2 py-4 shadow-lg">
         <p className="text-base font-bold text-zinc-900">Happy Students</p>
         <p className="mt-0.5 flex items-center gap-1 text-sm text-zinc-700">
           4.5
           <span className="text-blue-600">★</span>
           <span className="text-zinc-600">(240)</span>
         </p>
-        <div className="mt-2 flex items-center -space-x-2">
+        <div className="mt-2 flex items-center -space-x-3">
           {badgeAvatars.map((src, i) => (
             <AppImage
               key={i}
