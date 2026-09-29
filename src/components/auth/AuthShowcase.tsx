@@ -57,8 +57,8 @@ export function AuthShowcase({ className }: { className?: string }) {
       aria-hidden="true"
       className={`pointer-events-none relative h-165 w-full max-w-lg select-none ${className ?? ""}`}
     >
-      {/* right card */}
-      <div className="absolute top-0 left-24 w-93.25">
+      {/* right card, raised above the other card */}
+      <div className="absolute top-0 left-24 z-10 w-93.25">
         <CourseCard course={showcaseCourses[0]} badgePosition="top" />
       </div>
 
