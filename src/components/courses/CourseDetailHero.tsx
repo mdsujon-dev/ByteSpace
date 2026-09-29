@@ -1,15 +1,16 @@
-import Link from "next/link";
-import { FiArrowLeft } from "react-icons/fi";
+import { FiShare2 } from "react-icons/fi";
 import { MdVerified, MdStar } from "react-icons/md";
 import { gridBackgroundStyle } from "@/lib/styles";
 import { Container } from "@/components/ui/Container";
 import { AppImage } from "@/components/ui/AppImage";
+import { CourseMedia } from "@/components/courses/CourseMedia";
+import { CourseSidebar } from "@/components/courses/CourseSidebar";
 import type { CourseDetail } from "@/lib/get-course-detail";
 
 export function CourseDetailHero({ course }: { course: CourseDetail }) {
   return (
     <section
-      className="relative bg-brand-blue pt-28 pb-24 lg:pt-16"
+      className="relative bg-brand-blue pt-28 pb-10 lg:pt-16"
       style={gridBackgroundStyle}
     >
       <Container>
@@ -34,13 +35,13 @@ export function CourseDetailHero({ course }: { course: CourseDetail }) {
             </div>
           </div>
 
-          <Link
-            href="/courses"
+          <button
+            type="button"
             className="flex shrink-0 items-center gap-1.5 rounded-full bg-brand-lime px-4 py-2 text-sm font-semibold text-zinc-900 transition-opacity hover:opacity-90"
           >
-            <FiArrowLeft className="h-4 w-4" />
-            Back
-          </Link>
+            <FiShare2 className="h-4 w-4" />
+            Share
+          </button>
         </div>
 
         <div className="mt-6 flex flex-wrap items-center gap-2">
@@ -55,6 +56,15 @@ export function CourseDetailHero({ course }: { course: CourseDetail }) {
           <span className="rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-zinc-700">
             {course.comments} Comments
           </span>
+        </div>
+
+        <div className="relative mt-8 flex flex-col gap-6 lg:flex-row lg:items-start">
+          <div className="lg:w-[calc(100%-384px)]">
+            <CourseMedia course={course} />
+          </div>
+          <div className="lg:absolute lg:top-0 lg:right-0 lg:w-90">
+            <CourseSidebar course={course} />
+          </div>
         </div>
       </Container>
     </section>

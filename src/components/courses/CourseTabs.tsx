@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FiCheck, FiLock, FiPlayCircle } from "react-icons/fi";
 import { MdStar } from "react-icons/md";
 import { AppImage } from "@/components/ui/AppImage";
+import { CourseSneakPeek } from "@/components/courses/CourseSneakPeek";
 import type { CourseDetail } from "@/lib/get-course-detail";
 
 const tabs = ["About", "Lessons", "Reviews"] as const;
@@ -42,6 +43,8 @@ export function CourseTabs({ course }: { course: CourseDetail }) {
                 ))}
               </div>
             </div>
+
+            <CourseSneakPeek images={course.sneakPeek} />
 
             <div>
               <h2 className="text-lg font-bold text-zinc-900">Key Points</h2>
