@@ -115,7 +115,7 @@ export function AuthShowcase({ className }: { className?: string }) {
         width={1254}
         height={1254}
         fit="contain"
-        className="absolute right-2 bottom-67 z-20 h-32 w-28"
+        className="absolute right-2 bottom-57 z-20 h-40 w-36"
       />
     </div>
   );
