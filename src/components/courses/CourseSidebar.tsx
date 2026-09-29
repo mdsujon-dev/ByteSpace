@@ -14,7 +14,7 @@ export function CourseSidebar({ course }: { course: CourseDetail }) {
         {course.lessons} Lessons ({course.duration})
       </h2>
 
-      <ul className="mt-4 max-h-72 space-y-1 overflow-y-auto">
+      <ul className="mt-4 space-y-1">
         {course.lessonsList.map((lesson, i) => (
           <li
             key={i}
