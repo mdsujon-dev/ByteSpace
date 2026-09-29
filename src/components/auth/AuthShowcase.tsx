@@ -70,7 +70,7 @@ export function AuthShowcase({ className }: { className?: string }) {
       <span className="absolute top-30 -left-4 h-20 w-14 rounded-full border-8 border-brand-lime" />
 
       {/* 3D-style triangle, 20px below the upper card */}
-      <div className="absolute top-130.5 left-2 h-16 w-20">
+      <div className="absolute top-110.5 left-2 h-24 w-28">
         <div
           className="absolute inset-0"
           style={{
@@ -87,7 +87,7 @@ export function AuthShowcase({ className }: { className?: string }) {
         />
       </div>
 
-      <div className="absolute right-0 bottom-24.5 rounded-xl bg-brand-lime px-4 py-3 shadow-lg">
+      <div className="absolute right-0 bottom-32 rounded-xl bg-brand-lime px-10.25 py-6.75 shadow-lg">
         <p className="text-base font-bold text-zinc-900">Happy Students</p>
         <p className="mt-0.5 flex items-center gap-1 text-sm text-zinc-700">
           4.5
