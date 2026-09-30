@@ -47,3 +47,19 @@ body {
     padding-bottom: 5rem;
   }
 }
+
+/* DecorStage: shapes are laid out on a fixed 1700px design width and the whole stage is scaled to fit
+   narrower viewports, so their arrangement around the centered content never changes.
+   tan(atan2(a, b)) is the CSS idiom for a unitless a/b ratio between two lengths. */
+@media (min-width: 64rem) {
+  .decor-stage {
+    --decor-scale: min(1, tan(atan2(100vw, 1700px)));
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    width: 1700px;
+    height: calc(100% / var(--decor-scale));
+    transform: translateX(-50%) scale(var(--decor-scale));
+    transform-origin: top center;
+  }
+}
