@@ -27,7 +27,7 @@ export function DecorShape({ src, className, tint }: DecorShapeProps) {
       aria-hidden="true"
       className={`pointer-events-none select-none ${className ?? ""}`}
     >
-      <AppImage src={src} alt="" fill className="object-contain" />
+      <AppImage src={src} alt="" fill fit="contain" />
       {tint && (
         <div
           className={`absolute inset-0 ${tintClass[tint]}`}

@@ -1,5 +1,9 @@
 import { CourseCard, type Course } from "@/components/courses/CourseCard";
 import { AppImage } from "@/components/ui/AppImage";
+import {
+  HappyStudentsCard,
+  type StudentAvatar,
+} from "@/components/ui/HappyStudentsCard";
 
 const uniqueAvatars = [
   "/avatars/avatar-1.png",
@@ -8,7 +12,7 @@ const uniqueAvatars = [
   "/avatars/avatar-4.png",
 ];
 
-const badgeAvatars = [
+const badgeAvatars: StudentAvatar[] = [
   "/avatars/avatar-1.png",
   "/avatars/avatar-2.png",
   "/avatars/avatar-3.png",
@@ -16,7 +20,7 @@ const badgeAvatars = [
   "/avatars/avatar-1.png",
   "/avatars/avatar-2.png",
   "/avatars/avatar-3.png",
-];
+].map((src) => ({ src }));
 
 const showcaseCourses: Course[] = [
   {
@@ -85,29 +89,13 @@ export function AuthShowcase({ className }: { className?: string }) {
         className="absolute top-94.75 left-2 h-40 w-44"
       />
 
-      <div className="absolute right-0 bottom-29.5 rounded-xl bg-brand-lime px-2 py-4 shadow-lg">
-        <p className="text-base font-bold text-zinc-900">Happy Students</p>
-        <p className="mt-0.5 flex items-center gap-1 text-sm text-zinc-700">
-          4.5
-          <span className="text-blue-600">★</span>
-          <span className="text-zinc-600">(240)</span>
-        </p>
-        <div className="mt-2 flex items-center -space-x-3">
-          {badgeAvatars.map((src, i) => (
-            <AppImage
-              key={i}
-              src={src}
-              alt=""
-              width={40}
-              height={40}
-              className="h-10 w-10 shrink-0 rounded-full border border-white object-cover"
-            />
-          ))}
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white bg-zinc-900 text-[11px] font-semibold text-white">
-            2K+
-          </span>
-        </div>
-      </div>
+      <HappyStudentsCard
+        variant="lime"
+        avatars={badgeAvatars}
+        rating={4.5}
+        reviews={240}
+        className="absolute right-0 bottom-29.5"
+      />
 
       <AppImage
         src="/auth/squiggle.png"

@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { DecorShape } from "@/components/ui/DecorShape";
+import { DecorStage } from "@/components/ui/DecorStage";
 import { gridBackgroundStyle } from "@/lib/styles";
 import Link from "next/link";
 
@@ -10,12 +11,11 @@ export function CreatorCTA() {
       style={gridBackgroundStyle}
     >
       {/* Decorative floating shapes */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      <DecorStage>
         {/* top-left, bleeding off the corner */}
         <DecorShape
           src="/auth/squiggle.png"
-          tint="lime"
-          className="absolute -top-6 -left-8 h-48 w-32 rotate-12"
+          className="absolute -top-[78px] -left-[62px] h-[330px] w-[230px] -rotate-[100deg]"
         />
         {/* beside the first heading line */}
         <DecorShape
@@ -25,37 +25,31 @@ export function CreatorCTA() {
         {/* top-right, bleeding off the corner */}
         <DecorShape
           src="/auth/triangle.png"
-          className="absolute -top-8 -right-10 h-40 w-24 rotate-100"
+          className="absolute top-[60px] right-[230px] h-[240px] w-[210px] -rotate-[100deg]"
         />
         {/* right edge, below the triangle */}
         <DecorShape
-          src="/auth/triangle.png"
-          tint="white"
-          className="absolute top-[4%] -right-6 h-64 w-28 rotate-12"
+          src="/home/white.png"
+          className="absolute top-[12%] -right-[54px] h-[338px] w-[178px] rotate-12"
         />
         {/* left edge, mid-height */}
         <DecorShape
           src="/auth/triangle.png"
           tint="white"
-          className="absolute top-[38%] -left-8 h-40 w-24 -rotate-90"
+          className="absolute top-[38%] -left-[62px] h-[264px] w-36 -rotate-30"
         />
         {/* bottom-left, bleeding off the bottom edge */}
         <DecorShape
           src="/auth/ring.png"
-          className="absolute -bottom-4 left-[5%] h-56 w-52 -rotate-12"
+          className="absolute bottom-[-74px] left-[5%] h-52 w-[280px]"
         />
         {/* right edge, beside the paragraph/button */}
         <DecorShape
           src="/auth/squiggle.png"
           tint="lime"
-          className="absolute top-[48%] right-[6%] h-36 w-28 rotate-12"
+          className="absolute top-[42%] right-[4%] h-56 w-44 translate-y-[150px] -rotate-6"
         />
-        {/* bottom-right, bleeding off the corner */}
-        <DecorShape
-          src="/auth/squiggle.png"
-          className="absolute -right-10 -bottom-10 h-16 w-16 rotate-180"
-        />
-      </div>
+      </DecorStage>
 
       <Container className="relative z-10">
         <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
