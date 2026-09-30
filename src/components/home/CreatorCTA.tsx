@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { DecorShape } from "@/components/ui/DecorShape";
 import { gridBackgroundStyle } from "@/lib/styles";
 import Link from "next/link";
 
@@ -8,14 +9,52 @@ export function CreatorCTA() {
       className="relative overflow-hidden bg-brand-blue py-24"
       style={gridBackgroundStyle}
     >
-      {/* Decorative floating shapes placeholders */}
+      {/* Decorative floating shapes */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        {/* We can use simple colored shapes to simulate the 3D objects */}
-        <div className="absolute top-10 left-10 h-24 w-24 -rotate-12 rounded-full border-[16px] border-brand-lime opacity-80 blur-[2px]" />
-        <div className="absolute bottom-20 left-20 h-0 w-0 border-l-[40px] border-r-[40px] border-b-[70px] border-l-transparent border-r-transparent border-b-white opacity-80 blur-[2px]" />
-        <div className="absolute top-20 right-40 h-0 w-0 -rotate-45 border-l-[30px] border-r-[30px] border-b-[50px] border-l-transparent border-r-transparent border-b-brand-lime opacity-80 blur-[1px]" />
-        <div className="absolute top-1/3 right-10 h-40 w-24 rotate-12 rounded-full bg-white opacity-90 blur-[2px]" />
-        <div className="absolute bottom-10 right-32 h-16 w-32 -rotate-12 rounded-full border-[12px] border-brand-lime opacity-80 blur-[1px]" />
+        {/* top-left, bleeding off the corner */}
+        <DecorShape
+          src="/auth/squiggle.png"
+          tint="lime"
+          className="absolute -top-6 -left-8 h-48 w-32 rotate-12"
+        />
+        {/* beside the first heading line */}
+        <DecorShape
+          src="/auth/squiggle.png"
+          className="absolute top-[6%] left-[14%] h-28 w-24 -rotate-12"
+        />
+        {/* top-right, bleeding off the corner */}
+        <DecorShape
+          src="/auth/triangle.png"
+          className="absolute -top-8 -right-10 h-40 w-24 rotate-100"
+        />
+        {/* right edge, below the triangle */}
+        <DecorShape
+          src="/auth/triangle.png"
+          tint="white"
+          className="absolute top-[4%] -right-6 h-64 w-28 rotate-12"
+        />
+        {/* left edge, mid-height */}
+        <DecorShape
+          src="/auth/triangle.png"
+          tint="white"
+          className="absolute top-[38%] -left-8 h-40 w-24 -rotate-90"
+        />
+        {/* bottom-left, bleeding off the bottom edge */}
+        <DecorShape
+          src="/auth/ring.png"
+          className="absolute -bottom-4 left-[5%] h-56 w-52 -rotate-12"
+        />
+        {/* right edge, beside the paragraph/button */}
+        <DecorShape
+          src="/auth/squiggle.png"
+          tint="lime"
+          className="absolute top-[48%] right-[6%] h-36 w-28 rotate-12"
+        />
+        {/* bottom-right, bleeding off the corner */}
+        <DecorShape
+          src="/auth/squiggle.png"
+          className="absolute -right-10 -bottom-10 h-16 w-16 rotate-180"
+        />
       </div>
 
       <Container className="relative z-10">

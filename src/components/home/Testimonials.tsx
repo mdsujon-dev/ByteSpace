@@ -24,11 +24,42 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="relative overflow-hidden bg-zinc-50 py-24">
+    <section className="relative overflow-hidden bg-white py-24">
       {/* Mesh Gradient Background Blobs */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden flex justify-center">
-        <div className="absolute -top-40 right-[-10%] h-[700px] w-[700px] rounded-full bg-brand-lime/50 blur-[140px]" />
-        <div className="absolute -bottom-40 left-[-10%] h-[700px] w-[700px] rounded-full bg-[#003be2]/25 blur-[140px]" />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div
+          className="absolute rounded-full blur-3xl"
+          style={{
+            top: 149,
+            left: -442,
+            width: 1137,
+            height: 1137,
+            background:
+              "radial-gradient(circle, rgba(0,59,226,0.5) 0%, rgba(0,59,226,0.12) 35%, rgba(0,59,226,0.03) 65%, rgba(0,59,226,0) 100%)",
+          }}
+        />
+        <div
+          className="absolute rounded-full blur-3xl"
+          style={{
+            top: -138,
+            left: 395,
+            width: 672,
+            height: 672,
+            background:
+              "radial-gradient(circle, rgba(203,252,1,1) 0%, rgba(203,252,1,0.23) 35%, rgba(203,252,1,0.06) 65%, rgba(203,252,1,0) 100%)",
+          }}
+        />
+        <div
+          className="absolute rounded-full blur-3xl"
+          style={{
+            top: -241,
+            left: 842,
+            width: 1137,
+            height: 1137,
+            background:
+              "radial-gradient(circle, rgba(203,252,1,1) 0%, rgba(203,252,1,0.23) 35%, rgba(203,252,1,0.06) 65%, rgba(203,252,1,0) 100%)",
+          }}
+        />
       </div>
 
       <Container className="relative z-10">
