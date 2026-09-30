@@ -7,7 +7,7 @@ import { DecorShape } from "@/components/ui/DecorShape";
 
 export function Features() {
   return (
-    <section className="relative overflow-hidden bg-white py-24">
+    <section className="relative overflow-hidden bg-white py-24 max-md:py-16">
       {/* Background blobs */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div
@@ -34,9 +34,9 @@ export function Features() {
         />
       </div>
 
-      <Container className="relative z-10 flex flex-col gap-32">
-        {/* Feature 1: For Students */}
-        <div className="flex flex-col items-center gap-12 md:flex-row md:justify-between">
+      <Container className="relative z-10 flex flex-col gap-32 max-md:gap-16">
+        {/* Feature 1: For Students. On phones (max-md:) each feature is minimal: text + photo, no floating widgets */}
+        <div className="flex flex-col items-center gap-12 max-md:gap-8 md:flex-row md:justify-between">
           <div className="flex-1 md:pr-12">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
               Your Path to Professional<br />
@@ -62,12 +62,12 @@ export function Features() {
           </div>
           <div className="relative flex-1">
             {/* Background CourseCard */}
-            <div className="absolute left-[90px] -top-[60px] w-[280px] scale-90 opacity-90 transition-transform hover:scale-100 z-0 pointer-events-none sm:left-[50px]">
+            <div className="absolute left-[90px] -top-[60px] w-[280px] scale-90 opacity-90 transition-transform hover:scale-100 z-0 pointer-events-none max-md:hidden sm:left-[50px]">
               <CourseCard course={sampleCourses[0]} />
             </div>
             
             {/* Image */}
-            <div className="relative z-10 mx-auto max-w-2xl overflow-hidden">
+            <div className="relative z-10 mx-auto max-w-2xl overflow-hidden max-md:max-w-xs">
               <AppImage 
                 src="/home/male.png" 
                 alt="Student" 
@@ -80,11 +80,11 @@ export function Features() {
             <DecorShape
               src="/auth/squiggle.png"
               tint="lime"
-              className="absolute bottom-57.5 right-4 z-30 h-25 w-25 translate-x-3.75 translate-y-3.75 sm:right-8"
+              className="absolute bottom-57.5 right-4 z-30 h-25 w-25 translate-x-3.75 translate-y-3.75 max-md:hidden sm:right-8"
             />
             
             {/* Floating widget: Learning Progress */}
-            <div className="absolute bottom-[129px] right-2 z-20 rounded-2xl border border-zinc-100 bg-white p-4 shadow-sm sm:right-4">
+            <div className="absolute bottom-[129px] right-2 z-20 rounded-2xl border border-zinc-100 bg-white p-4 shadow-sm max-md:hidden sm:right-4">
               <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider">Learning Progress</p>
               <p className="mt-1 text-[40px] font-semibold leading-tight tracking-[-0.01em] text-zinc-900">55%</p>
               <div className="mt-2 h-2 w-36 rounded-full bg-zinc-100">
@@ -95,10 +95,10 @@ export function Features() {
         </div>
 
         {/* Feature 2: For Creators */}
-        <div className="flex flex-col-reverse items-center gap-12 md:flex-row md:justify-between">
+        <div className="flex flex-col-reverse items-center gap-12 max-md:gap-8 md:flex-row md:justify-between">
           <div className="relative flex-1">
             {/* Image */}
-            <div className="relative z-10 mx-auto max-w-lg overflow-hidden">
+            <div className="relative z-10 mx-auto max-w-lg overflow-hidden max-md:max-w-xs">
               <AppImage 
                 src="/home/female.png" 
                 alt="Creator" 
@@ -109,7 +109,7 @@ export function Features() {
             </div>
             
             {/* Floating widget 1: Total Revenue */}
-            <div className="absolute top-[calc(5%+5px)] left-[10px] z-0 w-[240px] rounded-2xl bg-brand-blue p-5">
+            <div className="absolute top-[calc(5%+5px)] left-[10px] z-0 w-[240px] rounded-2xl bg-brand-blue p-5 max-md:hidden">
               <p className="text-[8px] font-medium text-white/70 uppercase tracking-wider">Total Revenue</p>
               <p className="text-[8px] text-white/50 mb-2">July 1-28</p>
               <p className="text-2xl font-bold text-white">$120.29</p>
@@ -119,7 +119,7 @@ export function Features() {
             </div>
 
             {/* Floating widget 2: Year to Date */}
-            <div className="absolute top-[calc(44%-10px)] left-[10px] z-0 rounded-2xl bg-brand-blue p-4">
+            <div className="absolute top-[calc(44%-10px)] left-[10px] z-0 rounded-2xl bg-brand-blue p-4 max-md:hidden">
               <p className="text-[8px] font-medium text-white/70 uppercase tracking-wider">Year to Date</p>
               <p className="text-[8px] text-white/50 mb-2">2023</p>
               <p className="text-xl font-bold text-white">$1,200.38</p>
@@ -134,7 +134,7 @@ export function Features() {
             />
 
             {/* Floating widget 3: Happy Students; below lg it drops past the photo's bottom edge to clear the Year to Date card */}
-            <div className="absolute bottom-[calc(5%+67px)] right-[13px] z-20 rounded-2xl bg-white border border-zinc-100 p-4 max-lg:-bottom-16 sm:-right-[3px]">
+            <div className="absolute bottom-[calc(5%+67px)] right-[13px] z-20 rounded-2xl bg-white border border-zinc-100 p-4 max-md:hidden max-lg:-bottom-16 sm:-right-[3px]">
               <p className="text-sm font-bold text-zinc-900">Happy Students</p>
               <div className="mt-1 flex items-center gap-1">
                 <span className="text-sm font-bold text-zinc-900">4.5</span>
