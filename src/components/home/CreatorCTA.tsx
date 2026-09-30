@@ -12,7 +12,8 @@ export function CreatorCTA() {
     >
       {/* Decorative floating shapes. The base classes are the tuned desktop layout; below lg (max-lg:) the
           text spans the full width, so the shapes shrink into the four corners and the side ones are hidden. */}
-      <DecorStage>
+      {/* Phones show only the background and text */}
+      <DecorStage className="max-md:hidden">
         {/* top-left, bleeding off the corner */}
         <DecorShape
           src="/auth/squiggle.png"
