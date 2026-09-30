@@ -126,15 +126,15 @@ export function Features() {
               <span className="mt-2 inline-block rounded-full bg-brand-lime px-2 py-0.5 text-[8px] font-bold text-zinc-900">12$</span>
             </div>
 
-            {/* Squiggle lime */}
+            {/* Squiggle lime; below lg it would sit on the face, so it's hidden there */}
             <DecorShape
               src="/auth/squiggle.png"
               tint="lime"
-              className="absolute top-[calc(35%-80px)] right-28 z-20 h-30 w-30 -scale-x-100 sm:right-30"
+              className="absolute top-[calc(35%-80px)] right-28 z-20 h-30 w-30 -scale-x-100 max-lg:hidden sm:right-30"
             />
 
-            {/* Floating widget 3: Happy Students */}
-            <div className="absolute bottom-[calc(5%+67px)] right-[13px] z-20 rounded-2xl bg-white border border-zinc-100 p-4 sm:-right-[3px]">
+            {/* Floating widget 3: Happy Students; below lg it drops past the photo's bottom edge to clear the Year to Date card */}
+            <div className="absolute bottom-[calc(5%+67px)] right-[13px] z-20 rounded-2xl bg-white border border-zinc-100 p-4 max-lg:-bottom-16 sm:-right-[3px]">
               <p className="text-sm font-bold text-zinc-900">Happy Students</p>
               <div className="mt-1 flex items-center gap-1">
                 <span className="text-sm font-bold text-zinc-900">4.5</span>
