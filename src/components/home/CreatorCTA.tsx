@@ -10,44 +10,45 @@ export function CreatorCTA() {
       className="relative overflow-hidden bg-brand-blue py-24"
       style={gridBackgroundStyle}
     >
-      {/* Decorative floating shapes */}
+      {/* Decorative floating shapes. The base classes are the tuned desktop layout; below lg (max-lg:) the
+          text spans the full width, so the shapes shrink into the four corners and the side ones are hidden. */}
       <DecorStage>
         {/* top-left, bleeding off the corner */}
         <DecorShape
           src="/auth/squiggle.png"
-          className="absolute -top-[78px] -left-[62px] h-[330px] w-[230px] -rotate-[100deg]"
+          className="absolute -top-[78px] -left-[62px] h-[330px] w-[230px] -rotate-[100deg] max-lg:-top-12 max-lg:-left-10 max-lg:h-36 max-lg:w-24"
         />
         {/* beside the first heading line */}
         <DecorShape
           src="/auth/squiggle.png"
-          className="absolute top-[6%] left-[14%] h-28 w-24 -rotate-12"
+          className="absolute top-[6%] left-[14%] h-28 w-24 -rotate-12 max-lg:hidden"
         />
         {/* top-right, bleeding off the corner */}
         <DecorShape
           src="/auth/triangle.png"
-          className="absolute top-[60px] right-[230px] h-[240px] w-[210px] -rotate-[100deg]"
+          className="absolute top-[60px] right-[230px] h-[240px] w-[210px] -rotate-[100deg] max-lg:top-2 max-lg:right-4 max-lg:h-20 max-lg:w-16"
         />
         {/* right edge, below the triangle */}
         <DecorShape
           src="/home/white.png"
-          className="absolute top-[12%] -right-[54px] h-[338px] w-[178px] rotate-12"
+          className="absolute top-[12%] -right-[54px] h-[338px] w-[178px] rotate-12 max-lg:hidden"
         />
         {/* left edge, mid-height */}
         <DecorShape
           src="/auth/triangle.png"
           tint="white"
-          className="absolute top-[38%] -left-[62px] h-[264px] w-36 -rotate-30"
+          className="absolute top-[38%] -left-[62px] h-[264px] w-36 -rotate-30 max-lg:hidden"
         />
         {/* bottom-left, bleeding off the bottom edge */}
         <DecorShape
           src="/auth/ring.png"
-          className="absolute bottom-[-74px] left-[5%] h-52 w-[280px]"
+          className="absolute bottom-[-74px] left-[5%] h-52 w-[280px] max-lg:-bottom-10 max-lg:left-2 max-lg:h-24 max-lg:w-32"
         />
         {/* right edge, beside the paragraph/button */}
         <DecorShape
           src="/auth/squiggle.png"
           tint="lime"
-          className="absolute top-[42%] right-[4%] h-56 w-44 translate-y-[150px] -rotate-6"
+          className="absolute top-[42%] right-[4%] h-56 w-44 translate-y-[150px] -rotate-6 max-lg:top-auto max-lg:-bottom-6 max-lg:right-2 max-lg:h-24 max-lg:w-20 max-lg:translate-y-0"
         />
       </DecorStage>
 
