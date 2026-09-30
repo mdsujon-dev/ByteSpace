@@ -3,15 +3,35 @@ import { FiCheckCircle } from "react-icons/fi";
 import { CourseCard } from "@/components/courses/CourseCard";
 import { sampleCourses } from "@/lib/sample-courses";
 import { AppImage } from "@/components/ui/AppImage";
+import { DecorShape } from "@/components/ui/DecorShape";
 
 export function Features() {
   return (
     <section className="relative overflow-hidden bg-white py-24">
       {/* Background blobs */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden flex justify-center">
-        <div className="absolute top-0 right-[10%] h-[500px] w-[500px] rounded-full bg-brand-lime/20 blur-[100px]" />
-        <div className="absolute top-[40%] left-[5%] h-[600px] w-[600px] rounded-full bg-brand-blue/10 blur-[120px]" />
-        <div className="absolute bottom-0 right-[20%] h-[500px] w-[500px] rounded-full bg-brand-lime/20 blur-[100px]" />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div
+          className="absolute rounded-full blur-3xl"
+          style={{
+            top: -466,
+            left: -152,
+            width: 1137,
+            height: 1137,
+            background:
+              "radial-gradient(circle, rgba(203,252,1,1) 0%, rgba(203,252,1,0.23) 35%, rgba(203,252,1,0.06) 65%, rgba(203,252,1,0) 100%)",
+          }}
+        />
+        <div
+          className="absolute rounded-full blur-3xl"
+          style={{
+            top: 946,
+            left: -287,
+            width: 672,
+            height: 672,
+            background:
+              "radial-gradient(circle, rgba(203,252,1,1) 0%, rgba(203,252,1,0.23) 35%, rgba(203,252,1,0.06) 65%, rgba(203,252,1,0) 100%)",
+          }}
+        />
       </div>
 
       <Container className="relative z-10 flex flex-col gap-32">
@@ -57,24 +77,11 @@ export function Features() {
               />
             </div>
             {/* Spring shape (Squiggle) */}
-            <div className="absolute bottom-[230px] right-4 z-30 opacity-100 sm:right-8 translate-x-[15px] translate-y-[15px] w-[100px] h-[100px]">
-              <div className="relative w-full h-full">
-                <AppImage src="/auth/squiggle.png" alt="Decoration" fill className="object-contain" />
-                <div 
-                  className="absolute inset-0 bg-brand-lime mix-blend-multiply"
-                  style={{
-                    maskImage: 'url(/auth/squiggle.png)',
-                    maskSize: 'contain',
-                    maskRepeat: 'no-repeat',
-                    maskPosition: 'center',
-                    WebkitMaskImage: 'url(/auth/squiggle.png)',
-                    WebkitMaskSize: 'contain',
-                    WebkitMaskRepeat: 'no-repeat',
-                    WebkitMaskPosition: 'center'
-                  }}
-                />
-              </div>
-            </div>
+            <DecorShape
+              src="/auth/squiggle.png"
+              tint="lime"
+              className="absolute bottom-57.5 right-4 z-30 h-25 w-25 translate-x-3.75 translate-y-3.75 sm:right-8"
+            />
             
             {/* Floating widget: Learning Progress */}
             <div className="absolute bottom-[129px] right-2 z-20 rounded-2xl border border-zinc-100 bg-white p-4 shadow-sm sm:right-4">
@@ -120,24 +127,11 @@ export function Features() {
             </div>
 
             {/* Squiggle lime */}
-            <div className="absolute top-[calc(35%-80px)] right-[112px] z-20 w-[120px] h-[120px] sm:right-[120px] -scale-x-100">
-              <div className="relative w-full h-full">
-                <AppImage src="/auth/squiggle.png" alt="Decoration" fill className="object-contain" />
-                <div 
-                  className="absolute inset-0 bg-brand-lime mix-blend-multiply"
-                  style={{
-                    maskImage: 'url(/auth/squiggle.png)',
-                    maskSize: 'contain',
-                    maskRepeat: 'no-repeat',
-                    maskPosition: 'center',
-                    WebkitMaskImage: 'url(/auth/squiggle.png)',
-                    WebkitMaskSize: 'contain',
-                    WebkitMaskRepeat: 'no-repeat',
-                    WebkitMaskPosition: 'center'
-                  }}
-                />
-              </div>
-            </div>
+            <DecorShape
+              src="/auth/squiggle.png"
+              tint="lime"
+              className="absolute top-[calc(35%-80px)] right-28 z-20 h-30 w-30 -scale-x-100 sm:right-30"
+            />
 
             {/* Floating widget 3: Happy Students */}
             <div className="absolute bottom-[calc(5%+67px)] right-[13px] z-20 rounded-2xl bg-white border border-zinc-100 p-4 sm:-right-[3px]">

@@ -6,6 +6,8 @@ import { AdvancedCourseFilters } from "@/components/courses/AdvancedCourseFilter
 import { CourseCard } from "@/components/courses/CourseCard";
 import { Pagination } from "@/components/ui/Pagination";
 import { Container } from "@/components/ui/Container";
+import { CreatorCTA } from "@/components/home/CreatorCTA";
+import { Testimonials } from "@/components/home/Testimonials";
 import { sampleCourses } from "@/lib/sample-courses";
 
 export const metadata: Metadata = {
@@ -37,6 +39,9 @@ export default function CoursesPage() {
           <Pagination page={1} totalPages={5} />
         </div>
       </Container>
+
+      <CreatorCTA />
+      <Testimonials />
     </div>
   );
 }
