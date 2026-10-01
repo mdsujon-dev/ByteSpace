@@ -23,7 +23,7 @@ export default function CoursesPage() {
           trailing={<SearchScopeDropdown />}
         />
       </Hero>
-
+{/* add comment */}
       <Container as="section" className="py-10">
         <AdvancedCourseFilters />
 
