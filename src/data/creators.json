@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "purepearl-studio",
+    "name": "purepearl studio",
+    "avatar": "/avatars/purepearl.png",
+    "verified": true,
+    "role": "Passionate UI/UX, Web designer",
+    "bio": "Welcome to the creative world of PurePearl Studio. Here, you'll discover the passion, expertise, and inspiration that drive my creative journey. Let's explore and learn together!\n\nDive into my creative portfolio, showcasing a glimpse of my artistic endeavors. From digital designs to multimedia projects, each piece tells a unique story. Explore the world of creativity with me.",
+    "followers": 172
+  },
+  {
+    "slug": "creativehive-co",
+    "name": "creativehive co",
+    "avatar": "/avatars/avatar-2.png",
+    "verified": true,
+    "role": "Web Development Mentor",
+    "bio": "creativehive co teaches full-stack web development the way it's actually used on real teams, pairing every concept with a shippable project.",
+    "followers": 140
+  },
+  {
+    "slug": "northbeam-academy",
+    "name": "northbeam academy",
+    "avatar": "/avatars/avatar-3.png",
+    "verified": false,
+    "role": "Data & Machine Learning Educator",
+    "bio": "northbeam academy specializes in making data science and machine learning approachable, with a hands-on curriculum built around real datasets.",
+    "followers": 98
+  },
+  {
+    "slug": "bytelab-school",
+    "name": "bytelab school",
+    "avatar": "/avatars/avatar-4.png",
+    "verified": true,
+    "role": "Marketing Strategist",
+    "bio": "bytelab school builds marketing courses around one idea: a campaign framework only matters if you can measure it. Practical, metrics-first, no fluff.",
+    "followers": 210
+  },
+  {
+    "slug": "visionary-labs",
+    "name": "visionary labs",
+    "avatar": "/avatars/avatar-1.png",
+    "verified": false,
+    "role": "Product Design Lead",
+    "bio": "visionary labs teaches the design process real product teams use, from research through to a polished, developer-ready handoff.",
+    "followers": 65
+  },
+  {
+    "slug": "growthdesk",
+    "name": "growthdesk",
+    "avatar": "/avatars/avatar-2.png",
+    "verified": true,
+    "role": "Finance Educator",
+    "bio": "growthdesk makes personal finance and investing genuinely practical, with courses built around a plan you actually leave with, not just concepts.",
+    "followers": 133
+  }
+]

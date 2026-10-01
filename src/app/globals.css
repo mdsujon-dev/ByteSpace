@@ -6,6 +6,7 @@
   --brand-blue: #003be2;
   --brand-lime: #d4f42b;
   --brand-pink: #ff24bd;
+  --brand-gray: #CED0D3;
 }
 
 @theme inline {
@@ -14,6 +15,7 @@
   --color-brand-blue: var(--brand-blue);
   --color-brand-lime: var(--brand-lime);
   --color-brand-pink: var(--brand-pink);
+  --color-brand-gray: var(--brand-gray);
   --font-sans: var(--font-poppins);
 }
 
@@ -21,4 +23,43 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+/* Strip antd's default line-tab chrome so only the pill labels show;
+   antd still drives the responsive scroll-with-arrows overflow behavior. */
+.course-category-tabs .ant-tabs-nav::before {
+  border-bottom: none;
+}
+.course-category-tabs .ant-tabs-tab {
+  padding: 0;
+}
+.course-category-tabs .ant-tabs-ink-bar {
+  display: none;
+}
+
+.hero-spacing {
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+}
+@media (min-width: 1024px) {
+  .hero-spacing {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* DecorStage: shapes are laid out on a fixed 1700px design width and the whole stage is scaled to fit
+   narrower viewports, so their arrangement around the centered content never changes.
+   tan(atan2(a, b)) is the CSS idiom for a unitless a/b ratio between two lengths. */
+@media (min-width: 64rem) {
+  .decor-stage {
+    --decor-scale: min(1, tan(atan2(100vw, 1700px)));
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    width: 1700px;
+    height: calc(100% / var(--decor-scale));
+    transform: translateX(-50%) scale(var(--decor-scale));
+    transform-origin: top center;
+  }
 }
