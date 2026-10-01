@@ -17,7 +17,7 @@ const clashDisplay = localFont({
   variable: "--font-clash-display",
 });
 
-// Satoshi (Fontshare, ITF Free Font License), self-hosted; Regular weight, used for the header navigation links.
+// Satoshi (Fontshare, ITF Free Font License), self-hosted; Regular weight, used for the header links (Figma "Body M").
 const satoshi = localFont({
   src: "../fonts/Satoshi-Regular.woff2",
   weight: "400",
