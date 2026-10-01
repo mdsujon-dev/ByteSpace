@@ -8,16 +8,19 @@ export function Logo({
   textClassName?: string;
 }) {
   return (
-    <div className={`flex items-center gap-2 ${className ?? ""}`}>
+    // Figma spec: 28.88×31.5 mark, 8px gap, 134×30 Clash Display Bold 24px wordmark whose box starts 7px below the mark's top
+    <div className={`flex items-start gap-2 ${className ?? ""}`}>
       <Image
         src="/logo.png"
         alt="ByteSpace"
-        width={26}
-        height={31}
+        width={29}
+        height={32}
         priority
-        className="h-7 w-auto"
+        className="h-[31.5px] w-[28.88px] object-contain"
       />
-      <span className={`text-lg font-bold tracking-tight ${textClassName}`}>
+      <span
+        className={`mt-1.75 font-display text-2xl leading-7.5 font-bold ${textClassName}`}
+      >
         ByteSpace
       </span>
     </div>

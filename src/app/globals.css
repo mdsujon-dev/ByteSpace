@@ -17,6 +17,8 @@
   --color-brand-pink: var(--brand-pink);
   --color-brand-gray: var(--brand-gray);
   --font-sans: var(--font-poppins);
+  --font-display: var(--font-clash-display);
+  --font-body: var(--font-satoshi);
 }
 
 body {
