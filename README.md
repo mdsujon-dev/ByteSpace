@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ByteSpace
 
-## Getting Started
+ByteSpace is an online learning platform where creators publish courses and learners discover them. This repository holds the marketing site and course catalog front end, built with the Next.js App Router.
 
-First, run the development server:
+## Features
+
+- **Home page:** a hero with course search, sponsors, course discovery by category, learning paths, feature highlights, a creator call to action and testimonials.
+- **Course catalog:** search with a scope picker, filters, a course card grid and pagination.
+- **Course details:** a statically generated page for each course, with a video preview, About / Lessons / Reviews tabs, a sneak-peek gallery and an enrollment sidebar.
+- **Creators:** a featured creator page and statically generated profile pages that list each creator's courses.
+- **Authentication screens:** login and signup pages with their own minimal layout.
+- **Responsive design:** the desktop layout is tuned at 1024px and up. Phones and tablets get simplified versions of the decorated sections.
+
+## Tech stack
+
+| Area | Tools |
+| --- | --- |
+| Framework | [Next.js 16](https://nextjs.org) (App Router, Turbopack), [React 19](https://react.dev) |
+| Language | TypeScript |
+| Styling | [Tailwind CSS v4](https://tailwindcss.com) |
+| UI components | [Ant Design 6](https://ant.design) (tabs, dropdowns) |
+| Icons | [react-icons](https://react-icons.github.io/react-icons/) |
+| Font | Poppins, loaded with `next/font` |
+| Package manager | pnpm |
+
+## Getting started
+
+### Prerequisites
+
+- Node.js 20.9 or later
+- pnpm 10 (`corepack enable` sets it up from the `packageManager` field)
+
+### Install and run
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+git clone https://github.com/mdsujon-dev/ByteSpace.git
+cd ByteSpace
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | What it does |
+| --- | --- |
+| `pnpm dev` | Starts the development server with hot reload |
+| `pnpm build` | Creates an optimized production build |
+| `pnpm start` | Serves the production build (run `pnpm build` first) |
+| `pnpm lint` | Runs ESLint |
 
-## Learn More
+## Routes
 
-To learn more about Next.js, take a look at the following resources:
+| Path | Page |
+| --- | --- |
+| `/` | Home |
+| `/courses` | Course catalog |
+| `/courses/[id]` | Course details (static, for example `/courses/course-1`) |
+| `/creators` | Featured creator profile |
+| `/creators/[id]` | Creator profile (static, for example `/creators/purepearl-studio`) |
+| `/login` | Sign in |
+| `/signup` | Create an account |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── app/
+│   ├── (site)/          # Pages with the shared header and footer
+│   ├── (auth)/          # Login and signup, with their own layout
+│   ├── layout.tsx       # Root layout: font, Ant Design registry, global styles
+│   ├── globals.css      # Tailwind setup, brand color tokens, shared CSS
+│   └── not-found.tsx
+├── components/
+│   ├── home/            # Home page sections
+│   ├── courses/         # Course catalog and course detail components
+│   ├── creators/        # Creator page components
+│   ├── auth/            # Login and signup forms and layout
+│   ├── layout/          # Header and footer
+│   ├── sections/        # Shared page sections, such as the generic hero
+│   ├── ui/              # Reusable building blocks (Container, AppImage, DecorShape, …)
+│   └── icons/
+├── data/                # Static JSON content, such as creators
+└── lib/                 # Sample data, data helpers and shared style objects
+public/                  # Images: course thumbnails, avatars, decorative shapes
+```
 
-## Deploy on Vercel
+## Design system
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Colors** are defined as CSS variables in `src/app/globals.css` and exposed as Tailwind colors:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  | Token | Value | Tailwind class |
+  | --- | --- | --- |
+  | Brand blue | `#003BE2` | `bg-brand-blue`, `text-brand-blue` |
+  | Brand lime | `#D4F42B` | `bg-brand-lime` |
+  | Brand pink | `#FF24BD` | `bg-brand-pink` |
+  | Brand gray | `#CED0D3` | `bg-brand-gray` |
+
+- **Typography** uses Poppins as the default sans-serif font.
+- **Layout:** `Container` caps content at 1199px with responsive side padding.
+- **Decorative shapes:** `DecorShape` renders the floating 3D shapes, which can be recolored with a `tint`. `DecorStage` places them on a centered 1700px stage that scales down on narrower desktop screens, so the arrangement stays the same at any width or browser zoom level.
+- **Shared cards:** reusable pieces such as `HappyStudentsCard` and `CourseCard` live in `components/ui` and `components/courses`, so every page uses the same version.
+
+## Content
+
+The site currently uses local sample data. There is no backend yet.
+
+- Courses: `src/lib/sample-courses.ts`
+- Creators: `src/data/creators.json`
+- Course details: generated from the sample courses in `src/lib/get-course-detail.ts`
+
+## Deployment
+
+The project deploys to [Vercel](https://vercel.com). Pushing to `main` triggers a production deployment, and other branches get preview deployments.
+
+If the deployed site shows a Vercel login page instead of the app, turn off **Settings → Deployment Protection → Vercel Authentication** for production in the Vercel project.
+
+## Contributing
+
+1. Create a branch from `main`.
+2. Make your changes and check that `pnpm lint` and `pnpm build` pass.
+3. Open a pull request into `main`.
