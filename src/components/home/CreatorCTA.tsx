@@ -55,7 +55,8 @@ export function CreatorCTA() {
 
       <Container className="relative z-10">
         <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          {/* lg+: Figma "Heading M" — Poppins SemiBold 44px, 120% line height, -1% tracking */}
+          <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[44px] lg:leading-[1.2] lg:tracking-[-0.01em]">
             Unlock Your Potential as a<br />
             Creator with ByteSpace
           </h2>

@@ -37,8 +37,11 @@ export function Features() {
       <Container className="relative z-10 flex flex-col gap-20 max-md:gap-16">
         {/* Feature 1: For Students. On phones (max-md:) each feature is minimal: text + photo, no floating widgets */}
         <div className="flex flex-col items-center gap-12 max-md:gap-8 md:flex-row md:justify-between">
-          <div className="flex-1 md:pr-12">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+          {/* min-w-0 stops the nowrap heading below from widening this column */}
+          <div className="min-w-0 flex-1 md:pr-12">
+            {/* xl:whitespace-nowrap keeps the first line whole once the container is full width (528px column);
+                it runs ~30px into the column's 48px right padding. Narrower screens wrap to 3 lines. */}
+            <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl lg:text-[44px] lg:leading-[1.2] lg:tracking-[-0.01em] xl:whitespace-nowrap">
               Your Path to Professional<br />
               Growth Starts Here!
             </h2>
@@ -152,7 +155,7 @@ export function Features() {
             </div>
           </div>
           <div className="flex-1 md:pl-12">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl lg:text-[44px] lg:leading-[1.2] lg:tracking-[-0.01em]">
               Create & Manage<br />
               Courses Easily.
             </h2>

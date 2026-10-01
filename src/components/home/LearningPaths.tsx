@@ -40,7 +40,7 @@ export function LearningPaths() {
     <section className="pb-24 bg-white">
       <Container>
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl lg:text-[44px] lg:leading-[1.2] lg:tracking-[-0.01em]">
             Explore Diverse Learning Paths at Bytespace
           </h2>
           <p className="mt-4 text-sm leading-6 text-zinc-500 sm:text-base md:leading-7">
