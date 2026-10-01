@@ -64,7 +64,7 @@ export function Testimonials() {
 
       <Container className="relative z-10">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-          <h2 className="max-w-sm text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
+          <h2 className="max-w-sm text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl lg:text-[44px] lg:leading-[1.2] lg:tracking-[-0.01em]">
             Discover What Our Community Is Saying
           </h2>
           <p className="max-w-2xl text-sm leading-6 text-zinc-600 md:text-base md:leading-7">

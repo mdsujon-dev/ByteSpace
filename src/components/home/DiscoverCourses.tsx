@@ -32,7 +32,7 @@ export function DiscoverCourses() {
     <section className="py-24 bg-white">
       <Container>
         <div className="flex flex-col items-center text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-zinc-900 sm:text-5xl lg:text-[44px] lg:leading-[1.2] lg:tracking-[-0.01em]">
             Discover Your Passion,<br />
             Build Your Skills
           </h2>
