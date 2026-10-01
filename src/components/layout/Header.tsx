@@ -40,7 +40,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-white/90 transition-colors hover:text-white"
+              className="font-body text-base leading-[1.6] text-white/90 transition-colors hover:text-white"
             >
               {link.label}
             </Link>
@@ -50,13 +50,13 @@ export function Header() {
         <div className="flex items-center gap-4 md:gap-6">
           <Link
             href="/login"
-            className="hidden text-sm text-white/90 transition-colors hover:text-white md:block"
+            className="hidden font-body text-base leading-[1.6] text-white/90 transition-colors hover:text-white md:block"
           >
             Sign In
           </Link>
           <Link
             href="/signup"
-            className="hidden text-sm text-white/90 transition-colors hover:text-white md:block"
+            className="hidden font-body text-base leading-[1.6] text-white/90 transition-colors hover:text-white md:block"
           >
             Join Us
           </Link>
