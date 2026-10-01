@@ -34,7 +34,7 @@ export function Features() {
         />
       </div>
 
-      <Container className="relative z-10 flex flex-col gap-32 max-md:gap-16">
+      <Container className="relative z-10 flex flex-col gap-20 max-md:gap-16">
         {/* Feature 1: For Students. On phones (max-md:) each feature is minimal: text + photo, no floating widgets */}
         <div className="flex flex-col items-center gap-12 max-md:gap-8 md:flex-row md:justify-between">
           <div className="flex-1 md:pr-12">
