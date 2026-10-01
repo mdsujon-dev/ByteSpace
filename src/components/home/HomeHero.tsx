@@ -42,8 +42,9 @@ export function HomeHero() {
         </DecorStage>
 
         <Container className="relative z-10">
-          <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-            <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+          {/* lg+: Figma "Heading L" — Poppins SemiBold 72px, 120% line height, -1% tracking, 935px box */}
+          <div className="mx-auto flex max-w-3xl flex-col items-center text-center lg:max-w-[935px]">
+            <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-[72px] lg:leading-[1.2] lg:tracking-[-0.01em]">
               Get Access to Hundreds Courses Available
             </h1>
             <p className="mt-6 max-w-2xl text-sm leading-7 text-white/80 md:text-base">
